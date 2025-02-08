@@ -25,7 +25,7 @@ export default function ProductOverview() {
       <Col md={3} className="p-3">
         <SurveyProgress currentStep={1} />
       </Col>
-      <Col md={9} className="p-4">
+      <Col md={9} className="p-4 content">
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>
@@ -83,22 +83,26 @@ export default function ProductOverview() {
             <div>
               {[
                 {
-                  value: "ideation",
+                  value:
+                    "Ideation Stage - Pre-seed Stage, problem-solution fit, conduct market research, prototype and validate the idea",
                   label:
                     "Ideation Stage - Pre-seed Stage, problem-solution fit, conduct market research, prototype and validate the idea",
                 },
                 {
-                  value: "early",
+                  value:
+                    "Early stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
                   label:
                     "Early stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
                 },
                 {
-                  value: "growth",
+                  value:
+                    "Growth Stage - Series A & B, achieve product-market fit",
                   label:
                     "Growth Stage - Series A & B, achieve product-market fit",
                 },
                 {
-                  value: "scale",
+                  value:
+                    "Scale stage - Series C and Beyond, Rapid scaling and expansion",
                   label:
                     "Scale stage - Series C and Beyond, Rapid scaling and expansion",
                 },

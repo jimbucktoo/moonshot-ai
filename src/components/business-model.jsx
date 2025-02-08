@@ -24,7 +24,7 @@ export default function BusinessModel() {
       <Col md={3} className="p-3">
         <SurveyProgress currentStep={5} />
       </Col>
-      <Col md={9} className="p-4">
+      <Col md={9} className="p-4 content">
         <Form
           onSubmit={handleSubmit}
           className="mx-auto"
