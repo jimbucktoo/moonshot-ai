@@ -1,18 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  FormControl,
-  FormGroup,
-  FormLabel,
-} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { SurveyProgress } from "./survey-progress";
-import FormCheck from "react-bootstrap/FormCheck";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+
 export default function ProductOverview() {
   const { formData, setFormData } = useSurvey();
   const navigate = useNavigate();
@@ -33,59 +27,59 @@ export default function ProductOverview() {
       </Col>
       <Col md={9} className="p-4">
         <Form onSubmit={handleSubmit}>
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               Provide a one-line summary of your product{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               type="text"
-              placeholder="Placeholder text"
+              placeholder="Enter a brief description of your product"
               required
               value={formData.summary}
               onChange={(e) =>
                 setFormData({ ...formData, summary: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               Who are your users? How many users does the product serve now?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               type="text"
-              placeholder="Placeholder text"
+              placeholder="Describe your target users and current user base"
               required
               value={formData.users}
               onChange={(e) =>
                 setFormData({ ...formData, users: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               What specific problem are you solving? How does it solve the
               problem for your users? <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="Placeholder text"
+              placeholder="Explain the problem your product addresses and how it provides a solution"
               required
               value={formData.problem}
               onChange={(e) =>
                 setFormData({ ...formData, problem: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               What is your product stage now?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
+            </Form.Label>
             <div>
               {[
                 {
@@ -109,7 +103,7 @@ export default function ProductOverview() {
                     "Scale stage - Series C and Beyond, Rapid scaling and expansion",
                 },
               ].map((stage) => (
-                <FormCheck
+                <Form.Check
                   key={stage.value}
                   type="radio"
                   name="stage"
@@ -123,21 +117,21 @@ export default function ProductOverview() {
                 />
               ))}
             </div>
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               Upload the link or file if there is a prototype or demo.
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               type="text"
-              placeholder="Placeholder text"
+              placeholder="Provide a link to your prototype or demo"
               value={formData.prototype}
               onChange={(e) =>
                 setFormData({ ...formData, prototype: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
           <Button
             type="submit"

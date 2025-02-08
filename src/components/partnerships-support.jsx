@@ -13,6 +13,7 @@ export default function PartnershipsSupport() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    navigate("/thank-you");
   };
 
   return (

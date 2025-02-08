@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  FormControl,
-  FormGroup,
-  FormLabel,
-} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { SurveyProgress } from "./survey-progress";
 import { useSurvey } from "../SurveyContext";
@@ -37,12 +31,12 @@ export default function ProductGoal() {
           className="mx-auto"
           style={{ maxWidth: "800px" }}
         >
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               What is the goal of your product?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
               placeholder="Describe your product's main goal"
               required
@@ -51,14 +45,14 @@ export default function ProductGoal() {
                 setFormData({ ...formData, goal: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               What is your plan to achieve this goal?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
               placeholder="Outline your plan"
               required
@@ -67,14 +61,14 @@ export default function ProductGoal() {
                 setFormData({ ...formData, plan: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
+          <Form.Group className="mb-3">
+            <Form.Label>
               What are the key milestones in your plan?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
               placeholder="List your key milestones"
               required
@@ -83,7 +77,7 @@ export default function ProductGoal() {
                 setFormData({ ...formData, milestones: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
           <div className="d-flex justify-content-between">
             <Link to="/product-overview">
