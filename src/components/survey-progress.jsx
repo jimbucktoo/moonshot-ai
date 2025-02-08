@@ -1,4 +1,5 @@
 import { ProgressBar, ListGroup, Card } from "react-bootstrap";
+import "../App.css";
 
 export function SurveyProgress({ currentStep }) {
   const steps = [

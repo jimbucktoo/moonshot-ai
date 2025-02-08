@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  FormControl,
-  FormGroup,
-  FormLabel,
-} from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Form, Container, Row, Col } from "react-bootstrap";
 import { SurveyProgress } from "./survey-progress";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-export default function ProductGoal() {
+export default function BusinessModel() {
   const { formData, setFormData } = useSurvey();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    navigate("/innovation-feasibility");
+    navigate("/partnerships-support");
   };
 
   return (
@@ -29,7 +22,7 @@ export default function ProductGoal() {
       className="min-vh-100 d-flex flex-row justify-content-between"
     >
       <Col md={3} className="p-3">
-        <SurveyProgress currentStep={2} />
+        <SurveyProgress currentStep={5} />
       </Col>
       <Col md={9} className="p-4">
         <Form
@@ -37,56 +30,58 @@ export default function ProductGoal() {
           className="mx-auto"
           style={{ maxWidth: "800px" }}
         >
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What is the goal of your product?{" "}
-              <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+          <Form.Group className="mb-3">
+            <Form.Label>
+              What is your revenue model? <span className="text-danger">*</span>
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="Describe your product's main goal"
+              placeholder="Describe your revenue model"
               required
-              value={formData.goal}
+              value={formData.revenueModel}
               onChange={(e) =>
-                setFormData({ ...formData, goal: e.target.value })
+                setFormData({ ...formData, revenueModel: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What is your plan to achieve this goal?{" "}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              How do you plan to acquire and retain customers?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="Outline your plan"
+              placeholder="Describe your customer acquisition and retention strategy"
               required
-              value={formData.plan}
+              value={formData.customerAcquisition}
               onChange={(e) =>
-                setFormData({ ...formData, plan: e.target.value })
+                setFormData({
+                  ...formData,
+                  customerAcquisition: e.target.value,
+                })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What are the key milestones in your plan?{" "}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              What is the size of your target market?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
-              as="textarea"
-              placeholder="List your key milestones"
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Estimate your target market size"
               required
-              value={formData.milestones}
+              value={formData.marketSize}
               onChange={(e) =>
-                setFormData({ ...formData, milestones: e.target.value })
+                setFormData({ ...formData, marketSize: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
           <div className="d-flex justify-content-between">
-            <Link to="/product-overview">
+            <Link to="/team-organization">
               <Button variant="primary">Previous</Button>
             </Link>
 

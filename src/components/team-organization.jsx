@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  FormControl,
-  FormGroup,
-  FormLabel,
-} from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Button, Form, Container, Row, Col } from "react-bootstrap";
 import { SurveyProgress } from "./survey-progress";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-export default function ProductGoal() {
+export default function TeamOrganization() {
   const { formData, setFormData } = useSurvey();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    navigate("/innovation-feasibility");
+    navigate("/business-model");
   };
 
   return (
@@ -29,7 +22,7 @@ export default function ProductGoal() {
       className="min-vh-100 d-flex flex-row justify-content-between"
     >
       <Col md={3} className="p-3">
-        <SurveyProgress currentStep={2} />
+        <SurveyProgress currentStep={4} />
       </Col>
       <Col md={9} className="p-4">
         <Form
@@ -37,56 +30,56 @@ export default function ProductGoal() {
           className="mx-auto"
           style={{ maxWidth: "800px" }}
         >
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What is the goal of your product?{" "}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              Who are the key members of your team?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="Describe your product's main goal"
+              placeholder="List your key team members"
               required
-              value={formData.goal}
+              value={formData.teamMembers}
               onChange={(e) =>
-                setFormData({ ...formData, goal: e.target.value })
+                setFormData({ ...formData, teamMembers: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What is your plan to achieve this goal?{" "}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              What are their roles and responsibilities?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="Outline your plan"
+              placeholder="Describe roles and responsibilities"
               required
-              value={formData.plan}
+              value={formData.roles}
               onChange={(e) =>
-                setFormData({ ...formData, plan: e.target.value })
+                setFormData({ ...formData, roles: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
-          <FormGroup className="mb-3">
-            <FormLabel>
-              What are the key milestones in your plan?{" "}
+          <Form.Group className="mb-3">
+            <Form.Label>
+              What relevant experience does your team have?{" "}
               <span className="text-danger">*</span>
-            </FormLabel>
-            <FormControl
+            </Form.Label>
+            <Form.Control
               as="textarea"
-              placeholder="List your key milestones"
+              placeholder="Describe your team's relevant experience"
               required
-              value={formData.milestones}
+              value={formData.experience}
               onChange={(e) =>
-                setFormData({ ...formData, milestones: e.target.value })
+                setFormData({ ...formData, experience: e.target.value })
               }
             />
-          </FormGroup>
+          </Form.Group>
 
           <div className="d-flex justify-content-between">
-            <Link to="/product-overview">
+            <Link to="/innovation-feasibility">
               <Button variant="primary">Previous</Button>
             </Link>
 

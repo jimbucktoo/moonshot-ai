@@ -10,32 +10,29 @@ import {
 import { Container, Row, Col } from "react-bootstrap";
 import { SurveyProgress } from "./survey-progress";
 import FormCheck from "react-bootstrap/FormCheck";
-
+import { useSurvey } from "../SurveyContext";
+import { useNavigate } from "react-router-dom";
+import "../App.css";
 export default function ProductOverview() {
-  const [formData, setFormData] = useState({
-    summary: "",
-    users: "",
-    problem: "",
-    stage: "",
-    prototype: "",
-  });
+  const { formData, setFormData } = useSurvey();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    navigate("/product-goal");
   };
 
   return (
-    <Container fluid className="min-vh-100 d-flex">
+    <Container
+      fluid
+      className="min-vh-100 d-flex flex-row justify-content-between"
+    >
       <Col md={3} className="p-3">
         <SurveyProgress currentStep={1} />
       </Col>
       <Col md={9} className="p-4">
-        <Form
-          onSubmit={handleSubmit}
-          className="mx-auto"
-          style={{ maxWidth: "800px" }}
-        >
+        <Form onSubmit={handleSubmit}>
           <FormGroup className="mb-3">
             <FormLabel>
               Provide a one-line summary of your product{" "}
@@ -142,15 +139,13 @@ export default function ProductOverview() {
             />
           </FormGroup>
 
-          <Link to="/product-goal">
-            <Button
-              type="submit"
-              className="float-end"
-              style={{ backgroundColor: "#0d6efd", borderColor: "#0d6efd" }}
-            >
-              Next
-            </Button>
-          </Link>
+          <Button
+            type="submit"
+            className="float-end"
+            style={{ backgroundColor: "#0d6efd", borderColor: "#0d6efd" }}
+          >
+            Next
+          </Button>
         </Form>
       </Col>
     </Container>
