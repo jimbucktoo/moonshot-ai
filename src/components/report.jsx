@@ -72,7 +72,7 @@ export default function EvaluationReport() {
             role="progressbar"
             style={{
               width: `${evaluationResponse.overall_score}%`,
-              background: "linear-gradient(to right, #ff6b00, #17b7ba)",
+              background: "linear-gradient(to right, #0d6efd, #ff0000)",
             }}
           />
         </div>
@@ -94,7 +94,7 @@ export default function EvaluationReport() {
                     role="progressbar"
                     style={{
                       width: `${criterion.score}%`,
-                      background: "linear-gradient(to right, #ff6b00, #17b7ba)",
+                      background: "linear-gradient(to right, #0d6efd, #ff0000)",
                     }}
                   />
                 </div>
