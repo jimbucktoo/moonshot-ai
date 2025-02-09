@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import { useSurvey } from "../SurveyContext";
@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function ThankYou() {
-  const { formData, setFormData } = useSurvey();
+  const { formData } = useSurvey();
   const navigate = useNavigate();
 
   const [proposal, setProposal] = useState("");
@@ -46,12 +46,12 @@ export default function ThankYou() {
     users: "Who are your users? How many users does the product serve now?",
   };
 
-  const updatedObject = replaceKeys(formData, keyMap);
-
-  const stringData = JSON.stringify(updatedObject);
-  setProposal(stringData);
-  console.log(stringData);
-  //handleEvaluate();
+  useEffect(() => {
+    const updatedObject = replaceKeys(formData, keyMap);
+    const stringData = JSON.stringify(updatedObject);
+    setProposal(stringData);
+    console.log("Updated Proposal:", stringData);
+  }, [formData]);
 
   const handleEvaluate = async () => {
     setLoading(true);
@@ -59,10 +59,11 @@ export default function ThankYou() {
     setResponse(null);
 
     try {
-      const res = await axios.post("http://localhost:5000/evaluate", {
+      const res = await axios.post("http://127.0.0.1:5001/evaluate", {
         proposal: proposal,
       });
 
+      console.log(res.data);
       setResponse(res.data);
     } catch (err) {
       setError("Error evaluating startup proposal. Please try again.");
@@ -72,15 +73,11 @@ export default function ThankYou() {
     }
   };
 
-  /*
   useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/report");
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
-  */
+    if (proposal) {
+      handleEvaluate();
+    }
+  }, [proposal]);
 
   return (
     <div className="d-flex min-vh-100 bg-light align-items-center justify-content-center">
@@ -91,7 +88,10 @@ export default function ThankYou() {
             We're analyzing your responses and generating your startup
             evaluation report...
           </p>
-          <Spinner animation="border" variant="primary" role="status" />
+          {loading && (
+            <Spinner animation="border" variant="primary" role="status" />
+          )}
+          {error && <p className="text-danger">{error}</p>}
         </Card.Body>
       </Card>
     </div>
