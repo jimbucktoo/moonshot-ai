@@ -26,8 +26,17 @@ export function SurveyProvider({ children }) {
     users: "",
   });
 
+  const [evaluationResponse, setEvaluationResponse] = useState(null);
+
   return (
-    <SurveyContext.Provider value={{ formData, setFormData }}>
+    <SurveyContext.Provider
+      value={{
+        formData,
+        setFormData,
+        evaluationResponse,
+        setEvaluationResponse,
+      }}
+    >
       {children}
     </SurveyContext.Provider>
   );

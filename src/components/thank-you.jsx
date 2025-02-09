@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function ThankYou() {
-  const { formData } = useSurvey();
+  const { formData, setEvaluationResponse } = useSurvey();
   const navigate = useNavigate();
 
   const [proposal, setProposal] = useState("");
@@ -62,8 +62,8 @@ export default function ThankYou() {
         proposal: proposal,
       });
 
-      console.log(res.data);
       setResponse(res.data);
+      setEvaluationResponse(res.data);
     } catch (err) {
       setError("Error evaluating startup proposal. Please try again.");
     } finally {
