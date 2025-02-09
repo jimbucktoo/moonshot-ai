@@ -50,7 +50,6 @@ export default function ThankYou() {
     const updatedObject = replaceKeys(formData, keyMap);
     const stringData = JSON.stringify(updatedObject);
     setProposal(stringData);
-    console.log("Updated Proposal:", stringData);
   }, [formData]);
 
   const handleEvaluate = async () => {
