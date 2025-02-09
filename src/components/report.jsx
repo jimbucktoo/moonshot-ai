@@ -100,7 +100,7 @@ export default function EvaluationReport() {
                 </div>
               </div>
               <p className="text-muted">{criterion.description}</p>
-              <Link to={`/evaluate/reasoning/${criterion.id}`}>
+              <Link to={`/reasoning/${criterion.id}`}>
                 <Button variant="outline-primary">
                   Reasoning for the analysis
                 </Button>
