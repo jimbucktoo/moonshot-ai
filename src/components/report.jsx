@@ -100,11 +100,10 @@ export default function EvaluationReport() {
                   />
                 </div>
               </div>
+              <h6>Improvement Suggestions:</h6>
               <p className="text-muted">{criterion.description}</p>
               <Link to={`/reasoning/${criterion.id}`}>
-                <Button variant="outline-primary">
-                  Reasoning for the analysis
-                </Button>
+                <Button variant="outline-primary">Reasoning Analysis</Button>
               </Link>
             </div>
           </div>

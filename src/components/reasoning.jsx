@@ -9,37 +9,37 @@ export default function Reasoning() {
   const criteriaData = [
     {
       id: 1,
-      title: "Reasoning for Application Completeness",
+      title: "Application Completeness",
       score: evaluationResponse.score_criteria1,
       reasoning: evaluationResponse.summary_reasoning_criteria1,
     },
     {
       id: 2,
-      title: "Reasoning for Product Validation",
+      title: "Product Validation",
       score: evaluationResponse.score_criteria2,
       reasoning: evaluationResponse.summary_reasoning_criteria2,
     },
     {
       id: 3,
-      title: "Reasoning for Market Size",
+      title: "Market Size",
       score: evaluationResponse.score_criteria3,
       reasoning: evaluationResponse.summary_reasoning_criteria3,
     },
     {
       id: 4,
-      title: "Reasoning for Competitive Edge",
+      title: "Competitive Edge",
       score: evaluationResponse.score_criteria4,
       reasoning: evaluationResponse.summary_reasoning_criteria4,
     },
     {
       id: 5,
-      title: "Reasoning for Business Model",
+      title: "Business Model",
       score: evaluationResponse.score_criteria5,
       reasoning: evaluationResponse.summary_reasoning_criteria5,
     },
     {
       id: 6,
-      title: "Reasoning for Team Strength",
+      title: "Team Strength",
       score: evaluationResponse.score_criteria6,
       reasoning: evaluationResponse.summary_reasoning_criteria6,
     },
@@ -86,7 +86,7 @@ export default function Reasoning() {
               </div>
             </div>
             <Card className="bg-light p-3">
-              <h2 className="mb-3">Detailed Analysis</h2>
+              <h2 className="mb-3">Reasoning Analysis</h2>
               <p>{criterion.reasoning}</p>
             </Card>
           </Card.Body>
