@@ -84,7 +84,7 @@ export default function ThankYou() {
       <Card className="p-4 text-center shadow" style={{ maxWidth: "500px" }}>
         <Card.Body>
           <h1 className="text-primary mb-3">
-            Generating Your Startup Evaluation Report
+            Generating Your Evaluation Report
           </h1>
           <p className="text-secondary mb-4">
             We're processing your responses to create valuable insights for

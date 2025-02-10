@@ -59,7 +59,7 @@ export default function EvaluationReport() {
 
   return (
     <div className="container py-5">
-      <h1 className="mb-4">Your Evaluation Report</h1>
+      <h1 className="mb-4">Evaluation Report</h1>
       <div className="mb-4">
         <div className="d-flex align-items-center gap-3 mb-3">
           <span className="h5">Overall Score:</span>
