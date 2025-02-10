@@ -83,10 +83,12 @@ export default function ThankYou() {
     <div className="d-flex min-vh-100 bg-light align-items-center justify-content-center">
       <Card className="p-4 text-center shadow" style={{ maxWidth: "500px" }}>
         <Card.Body>
-          <h1 className="text-primary mb-3">Thank You!</h1>
+          <h1 className="text-primary mb-3">
+            Generating Your Startup Evaluation Report
+          </h1>
           <p className="text-secondary mb-4">
-            We're analyzing your responses and generating your startup
-            evaluation report...
+            We're processing your responses to create valuable insights for
+            you...
           </p>
           {loading && (
             <Spinner animation="border" variant="primary" role="status" />
