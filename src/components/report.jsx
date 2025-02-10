@@ -53,6 +53,7 @@ export default function EvaluationReport() {
   useEffect(() => {
     if (evaluationResponse) {
       console.log("Evaluation Report:", evaluationResponse);
+      console.log(evaluationResponse.think_section);
     }
   }, [evaluationResponse]);
 
@@ -109,6 +110,81 @@ export default function EvaluationReport() {
           </div>
         ))}
       </div>
+
+      {/* Reasoning Section with Proper Formatting */}
+      {evaluationResponse.think_section && (
+        <div className="mb-4 p-3 border rounded bg-light">
+          <h5 className="text-primary">Chain-of-Thought Reasoning</h5>
+
+          {(() => {
+            // Match "Criteria X:" to split into sections while keeping the intro
+            const matches = Array.from(
+              evaluationResponse.think_section.matchAll(/(Criteria \d+:)/g)
+            );
+
+            if (matches.length === 0) {
+              // No criteria found, just display the whole text as a paragraph
+              return (
+                <p className="text-muted">
+                  {evaluationResponse.think_section.trim()}
+                </p>
+              );
+            }
+
+            const introText = evaluationResponse.think_section
+              .slice(0, matches[0].index)
+              .trim();
+            const criteriaSections = matches.map((match, i) => {
+              const start = match.index;
+              const end = matches[i + 1]
+                ? matches[i + 1].index
+                : evaluationResponse.think_section.length;
+
+              // Extract full criteria text
+              const criteriaText = evaluationResponse.think_section
+                .slice(start + match[1].length, end)
+                .trim();
+
+              // Check if the text contains a "Summary:"
+              const summaryIndex = criteriaText.indexOf("Summary:");
+
+              if (summaryIndex !== -1) {
+                // Split main explanation and summary
+                const explanation = criteriaText.slice(0, summaryIndex).trim();
+                const summary = criteriaText.slice(summaryIndex).trim();
+
+                return (
+                  <React.Fragment key={`criteria-${i}`}>
+                    <li>
+                      <strong>{match[1]}</strong> {explanation}
+                    </li>
+                    <li>
+                      <strong>{summary.split(":")[0]}:</strong>{" "}
+                      {summary.split(":").slice(1).join(":").trim()}
+                    </li>
+                  </React.Fragment>
+                );
+              } else {
+                // No summary found, push entire criteria text
+                return (
+                  <li key={`criteria-${i}`}>
+                    <strong>{match[1]}</strong> {criteriaText}
+                  </li>
+                );
+              }
+            });
+
+            return (
+              <>
+                {/* Display the intro as a paragraph */}
+                <p className="text-muted">{introText}</p>
+                {/* Display criteria and summaries as a bullet list */}
+                <ul className="text-muted">{criteriaSections}</ul>
+              </>
+            );
+          })()}
+        </div>
+      )}
     </div>
   );
 }
