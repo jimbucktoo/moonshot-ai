@@ -62,6 +62,7 @@ export default function ThankYou() {
         proposal: proposal,
       });
 
+      console.log(res.data);
       setResponse(res.data);
       setEvaluationResponse(res.data);
     } catch (err) {
