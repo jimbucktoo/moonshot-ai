@@ -58,9 +58,12 @@ export default function ThankYou() {
     setResponse(null);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5001/evaluate", {
-        proposal: proposal,
-      });
+      const res = await axios.post(
+        "https://moonshot-ai-api.onrender.com/evaluate",
+        {
+          proposal: proposal,
+        }
+      );
 
       console.log(res.data);
       setResponse(res.data);
