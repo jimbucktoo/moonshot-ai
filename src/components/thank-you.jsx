@@ -13,6 +13,7 @@ export default function ThankYou() {
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [evaluationSent, setEvaluationSent] = useState(false);
 
   function replaceKeys(obj, keyMap) {
     return Object.fromEntries(
@@ -60,9 +61,7 @@ export default function ThankYou() {
     try {
       const res = await axios.post(
         "https://moonshot-ai-api.onrender.com/evaluate",
-        {
-          proposal: proposal,
-        }
+        { proposal }
       );
 
       console.log(res.data);
@@ -72,15 +71,22 @@ export default function ThankYou() {
       setError("Error evaluating startup proposal. Please try again.");
     } finally {
       setLoading(false);
-      navigate("/report");
     }
   };
 
   useEffect(() => {
-    if (proposal) {
+    console.log("Updated proposal:", proposal);
+    if (proposal && !evaluationSent) {
+      setEvaluationSent(true);
       handleEvaluate();
     }
   }, [proposal]);
+
+  useEffect(() => {
+    if (response) {
+      navigate("/report");
+    }
+  }, [response]);
 
   return (
     <div className="d-flex min-vh-100 bg-light align-items-center justify-content-center">
