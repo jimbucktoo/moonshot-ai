@@ -1,6 +1,6 @@
 # moonshot-ai
 
-moonshot-ai
+MoonshotAI is an AI-powered startup idea evaluation tool that analyzes startup ideas to empower data-driven decision-making.
 
 ## Links
 
