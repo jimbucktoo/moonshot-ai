@@ -7,7 +7,7 @@ import "../App.css";
 export default function Moonshot() {
   return (
     <main className="mainContent">
-      <Container className="py-5">
+      <Container className="py-4">
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start">
             <img src={Logo} alt="MoonshotAI Logo" width={500} />
@@ -34,12 +34,7 @@ export default function Moonshot() {
             </div>
           </Col>
           <Col md={6} className="d-none d-md-block text-center">
-            <img
-              src={Image1}
-              alt="Startup illustration"
-              width={500}
-              height={600}
-            />
+            <img src={Image1} alt="Startup illustration" height={520} />
           </Col>
         </Row>
       </Container>
