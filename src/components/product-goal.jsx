@@ -81,13 +81,12 @@ export default function ProductGoal() {
 
           <div className="d-flex justify-content-between">
             <Link to="/product-overview">
-              <Button variant="primary">Previous</Button>
+              <Button variant="primary" size="md">
+                Previous
+              </Button>
             </Link>
 
-            <Button
-              type="submit"
-              style={{ backgroundColor: "#0d6efd", borderColor: "#0d6efd" }}
-            >
+            <Button type="submit" variant="primary" size="md">
               Next
             </Button>
           </div>

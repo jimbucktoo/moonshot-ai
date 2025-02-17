@@ -82,13 +82,12 @@ export default function BusinessModel() {
 
           <div className="d-flex justify-content-between">
             <Link to="/team-organization">
-              <Button variant="primary">Previous</Button>
+              <Button variant="primary" size="md">
+                Previous
+              </Button>
             </Link>
 
-            <Button
-              type="submit"
-              style={{ backgroundColor: "#0d6efd", borderColor: "#0d6efd" }}
-            >
+            <Button type="submit" variant="primary" size="md">
               Next
             </Button>
           </div>

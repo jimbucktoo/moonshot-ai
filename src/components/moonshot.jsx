@@ -1,14 +1,16 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Image1 from "../assets/image1.png";
+import Logo from "../assets/MoonshotAILogo.png";
 import "../App.css";
 
 export default function Moonshot() {
   return (
-    <main style={{ minHeight: "100vh", backgroundColor: "#FFFFFF" }}>
+    <main className="mainContent">
       <Container className="py-5">
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start">
+            <img src={Logo} alt="MoonshotAI Logo" width={500} />
             <h1>Turn Your Startup Idea into Reality 🚀</h1>
             <div className="my-4">
               <h2>Insightful Evaluations.</h2>

@@ -89,10 +89,10 @@ export default function ThankYou() {
   }, [response]);
 
   return (
-    <div className="d-flex min-vh-100 bg-light align-items-center justify-content-center">
+    <div className="d-flex min-vh-100 bg-dark align-items-center justify-content-center">
       <Card className="p-4 text-center shadow" style={{ maxWidth: "500px" }}>
         <Card.Body>
-          <h1 className="text-primary mb-3">
+          <h1 className="moonshotBlue mb-3">
             Generating Your Evaluation Report
           </h1>
           <p className="text-secondary mb-4">

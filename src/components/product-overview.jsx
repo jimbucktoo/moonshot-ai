@@ -140,7 +140,8 @@ export default function ProductOverview() {
           <Button
             type="submit"
             className="float-end"
-            style={{ backgroundColor: "#0d6efd", borderColor: "#0d6efd" }}
+            variant="primary"
+            size="md"
           >
             Next
           </Button>
