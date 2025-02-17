@@ -29,7 +29,7 @@ export default function ProductOverview() {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>
-              Provide a one-line summary of your product{" "}
+              Provide a one-line summary of your product.{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -84,27 +84,27 @@ export default function ProductOverview() {
               {[
                 {
                   value:
-                    "Ideation Stage - Pre-seed Stage, problem-solution fit, conduct market research, prototype and validate the idea",
+                    "Ideation Stage - Pre-seed Stage, Problem-solution fit, Conducting market research, Prototyping and validating the idea",
                   label:
-                    "Ideation Stage - Pre-seed Stage, problem-solution fit, conduct market research, prototype and validate the idea",
+                    "Ideation Stage - Pre-seed Stage, Problem-solution fit, Conducting market research, Prototyping and validating the idea",
                 },
                 {
                   value:
-                    "Early stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
+                    "Early Stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
                   label:
-                    "Early stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
+                    "Early Stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
                 },
                 {
                   value:
-                    "Growth Stage - Series A & B, achieve product-market fit",
+                    "Growth Stage - Series A & B, Achieved product-market fit",
                   label:
-                    "Growth Stage - Series A & B, achieve product-market fit",
+                    "Growth Stage - Series A & B, Achieved product-market fit",
                 },
                 {
                   value:
-                    "Scale stage - Series C and Beyond, Rapid scaling and expansion",
+                    "Scale Stage - Series C and Beyond, Rapid scaling and expansion",
                   label:
-                    "Scale stage - Series C and Beyond, Rapid scaling and expansion",
+                    "Scale Stage - Series C and Beyond, Rapid scaling and expansion",
                 },
               ].map((stage) => (
                 <Form.Check
