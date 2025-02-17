@@ -11,16 +11,19 @@ export default function Moonshot() {
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start">
             <img src={Logo} alt="MoonshotAI Logo" width={500} />
-            <h1>Turn Your Startup Idea into Reality 🚀</h1>
-            <div className="my-4">
+            <h1>Turn Your Startup Idea into Reality</h1>
+            <br />
+            <h1>🚀 🌖</h1>
+            <br />
+            <div className="my-1">
               <h2>Insightful Evaluations.</h2>
               <h2>Smarter Decisions.</h2>
               <h2>Better Outcomes.</h2>
             </div>
+            <br />
             <p className="lead">
-              Discover your startup's true potential with detailed AI-powered
-              insights and an accelerator ecosystem connecting founders and
-              investors.
+              Discover your startup's true potential with detailed, AI-powered
+              insights.
             </p>
             <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
               <Link to="/product-overview">
