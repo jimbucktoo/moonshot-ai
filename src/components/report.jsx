@@ -137,7 +137,7 @@ export default function EvaluationReport() {
                     className="progress-bar"
                     role="progressbar"
                     style={{
-                      width: `${data.overall_score}%`,
+                      width: `${criterion.score}%`,
                       background: "linear-gradient(to right, #ff0000, #0d6efd)",
                     }}
                   />
