@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export default function EvaluationReport() {
-  const { evaluationResponse } = useSurvey();
+  const { evaluationResponse, setFormData, setEvaluationResponse } =
+    useSurvey();
   const navigate = useNavigate();
 
   const defaultData = {
@@ -88,9 +89,42 @@ export default function EvaluationReport() {
     return `rgb(${r}, ${g}, ${b})`;
   };
 
+  const handleResetAndNavigate = () => {
+    setFormData({
+      challenges: "",
+      customerAcquisition: "",
+      experience: "",
+      feasibility: "",
+      funding: "",
+      goal: "",
+      innovation: "",
+      marketSize: "",
+      milestones: "",
+      partnerships: "",
+      plan: "",
+      problem: "",
+      prototype: "",
+      revenueModel: "",
+      roles: "",
+      stage: "",
+      summary: "",
+      support: "",
+      teamMembers: "",
+      users: "",
+    });
+
+    setEvaluationResponse(null);
+
+    navigate("/");
+  };
+
   return (
     <div className="container py-5">
-      <Button variant="primary" className="mb-3" onClick={() => navigate("/")}>
+      <Button
+        variant="primary"
+        className="mb-3"
+        onClick={handleResetAndNavigate}
+      >
         Start a New Evaluation
       </Button>
       <h1 className="mb-4 mt-3 moonshotWhite">Evaluation Report</h1>
