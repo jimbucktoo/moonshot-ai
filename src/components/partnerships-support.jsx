@@ -32,12 +32,12 @@ export default function PartnershipsSupport() {
         >
           <Form.Group className="mb-3">
             <Form.Label>
-              Do you have any strategic partnerships? If so, describe them.{" "}
-              <span className="text-danger">*</span>
+              Do you have any strategic partnerships? If so, how do they
+              contribute to your success? <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
               as="textarea"
-              placeholder="Describe your partnerships"
+              placeholder="Describe your partnerships and their contributions"
               required
               value={formData.partnerships}
               onChange={(e) =>
@@ -48,7 +48,7 @@ export default function PartnershipsSupport() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What kind of support do you need to succeed?{" "}
+              What support do you need to achieve your goals?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -64,12 +64,12 @@ export default function PartnershipsSupport() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              How much funding do you need and how do you plan to use it?{" "}
+              How much funding do you need, and how will you allocate it?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
               as="textarea"
-              placeholder="Describe your funding needs and plans"
+              placeholder="Describe your funding needs and plans for allocation"
               required
               value={formData.funding}
               onChange={(e) =>
@@ -86,7 +86,7 @@ export default function PartnershipsSupport() {
             </Link>
 
             <Button type="submit" variant="primary" size="md">
-              Next
+              Submit
             </Button>
           </div>
         </Form>

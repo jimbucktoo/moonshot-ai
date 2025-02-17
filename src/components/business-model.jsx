@@ -47,7 +47,7 @@ export default function BusinessModel() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              How do you plan to acquire and retain customers?{" "}
+              What is your strategy for acquiring and retaining customers?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control

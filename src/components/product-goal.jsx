@@ -33,7 +33,7 @@ export default function ProductGoal() {
         >
           <Form.Group className="mb-3">
             <Form.Label>
-              What is the goal of your product?{" "}
+              What is the primary goal of your product?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -49,7 +49,7 @@ export default function ProductGoal() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What is your plan to achieve this goal?{" "}
+              How do you plan to achieve this goal?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -65,7 +65,7 @@ export default function ProductGoal() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What are the key milestones in your plan?{" "}
+              What are the key milestones in your roadmap?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control

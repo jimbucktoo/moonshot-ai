@@ -48,7 +48,7 @@ export default function TeamOrganization() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What are their roles and responsibilities?{" "}
+              What are their primary roles and responsibilities in the project?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -64,7 +64,7 @@ export default function TeamOrganization() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What relevant experience does your team have?{" "}
+              What relevant experience does your team bring to this project?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control

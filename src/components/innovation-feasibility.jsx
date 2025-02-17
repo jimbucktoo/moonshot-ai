@@ -32,7 +32,7 @@ export default function InnovationFeasibility() {
         >
           <Form.Group className="mb-3">
             <Form.Label>
-              How is your product innovative?{" "}
+              What makes your product innovative?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -48,8 +48,8 @@ export default function InnovationFeasibility() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              How feasible is your product?{" "}
-              <span className="text-danger">*</span>
+              How feasible is your product in terms of technology, market
+              demand, and execution? <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
               as="textarea"

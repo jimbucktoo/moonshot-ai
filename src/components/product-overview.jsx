@@ -29,7 +29,7 @@ export default function ProductOverview() {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>
-              Provide a one-line summary of your product.{" "}
+              Can you provide a brief summary of your product?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
@@ -45,8 +45,8 @@ export default function ProductOverview() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              Who are your users? How many users does the product serve now?{" "}
-              <span className="text-danger">*</span>
+              Who are your target users, and how many are currently using the
+              product? <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
               type="text"
@@ -61,8 +61,9 @@ export default function ProductOverview() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What specific problem are you solving? How does it solve the
-              problem for your users? <span className="text-danger">*</span>
+              What specific problem does your product solve, and how does it
+              address this issue for users?{" "}
+              <span className="text-danger">*</span>
             </Form.Label>
             <Form.Control
               as="textarea"
@@ -77,7 +78,7 @@ export default function ProductOverview() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What is your product stage now?{" "}
+              What stage of development is your product in?{" "}
               <span className="text-danger">*</span>
             </Form.Label>
             <div>
@@ -125,7 +126,8 @@ export default function ProductOverview() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              Upload the link or file if there is a prototype or demo.
+              Do you have a prototype or demo? If so, please share the link or
+              file.
             </Form.Label>
             <Form.Control
               type="text"
