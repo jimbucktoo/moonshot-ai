@@ -107,8 +107,9 @@ export default function ThankYou() {
           )}
           {error && <p className="text-danger">{error}</p>}
           <p className="text-secondary mb-4">
-            We're processing your responses to create valuable insights for you!
-            This may take a few minutes.
+            Analyzing your idea with advanced AI algorithms.
+            <br />
+            This may take a moment as we dive deep into the details.
           </p>
           <img src={Image3} alt="Startup illustration" height={300} />
         </Card.Body>

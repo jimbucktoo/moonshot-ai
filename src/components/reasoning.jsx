@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button, Container, Card, ListGroup, Image } from "react-bootstrap";
-import Image2 from "../assets/image2.png";
+import Image4 from "../assets/image4.png";
 import { useSurvey } from "../SurveyContext";
 import "../App.css";
 
@@ -100,13 +100,12 @@ export default function Reasoning() {
         <Card.Body>
           <div className="d-flex align-items-center mb-3">
             <Image
-              src={Image2}
+              src={Image4}
               alt="Criterion illustration"
-              width={100}
-              height={100}
+              height={240}
               roundedCircle
             />
-            <div className="ms-4">
+            <div className="ms-2">
               <h1 className="moonshotWhite">{criterion.title}</h1>
               <div className="d-flex align-items-center gap-2 moonshotWhite">
                 <span className="h4">Score: </span>
@@ -129,7 +128,7 @@ export default function Reasoning() {
               </div>
             </div>
           </div>
-          <Card className="p-3 mt-5">
+          <Card className="p-3 mt-3">
             <h2 className="mb-2 moonshotBlack">Reasoning Analysis</h2>
             <h6 className="mt-2 moonshotBlack">
               Reasoning Analysis provides a detailed breakdown of why MoonshotAI
