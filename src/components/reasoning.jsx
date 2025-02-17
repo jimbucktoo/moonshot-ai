@@ -96,7 +96,7 @@ export default function Reasoning() {
       <Button variant="primary" className="mb-3" onClick={() => navigate(-1)}>
         Back to Report
       </Button>
-      <Card className="moonshotBgBlack mt-3">
+      <Card className="moonshotBgBlack mt-3 border-0">
         <Card.Body>
           <div className="d-flex align-items-center mb-3">
             <Image

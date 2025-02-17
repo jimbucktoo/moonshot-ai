@@ -20,7 +20,7 @@ export default function ProductGoal() {
   return (
     <Container
       fluid
-      className="min-vh-100 d-flex flex-row justify-content-between"
+      className="bg-dark min-vh-100 d-flex flex-row justify-content-between"
     >
       <Col md={3} className="p-3">
         <SurveyProgress currentStep={2} />
