@@ -127,7 +127,7 @@ export default function ProductOverview() {
           <Form.Group className="mb-3">
             <Form.Label>
               Do you have a prototype or demo? If so, please share the link or
-              file.
+              file:
             </Form.Label>
             <Form.Control
               type="text"
