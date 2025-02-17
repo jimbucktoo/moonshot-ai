@@ -75,6 +75,19 @@ export default function EvaluationReport() {
     console.log("Evaluation Report:", data);
   }, [data]);
 
+  const getGradientColor = (score) => {
+    const red = { r: 255, g: 0, b: 0 };
+    const blue = { r: 13, g: 110, b: 253 };
+
+    const ratio = 1 - score / 100;
+
+    const r = Math.round(blue.r * (1 - ratio) + red.r * ratio);
+    const g = Math.round(blue.g * (1 - ratio) + red.g * ratio);
+    const b = Math.round(blue.b * (1 - ratio) + red.b * ratio);
+
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
   return (
     <div className="container py-5">
       <Button variant="primary" className="mb-3" onClick={() => navigate("/")}>
@@ -86,7 +99,12 @@ export default function EvaluationReport() {
           <span className="moonshotWhite">
             <h5>Overall Score:</h5>
           </span>
-          <span className="display-4 text-primary">{data.overall_score}</span>
+          <span
+            className="display-4"
+            style={{ color: getGradientColor(data.overall_score) }}
+          >
+            {data.overall_score}
+          </span>
         </div>
         <div className="progress" style={{ height: "10px" }}>
           <div
@@ -94,29 +112,33 @@ export default function EvaluationReport() {
             role="progressbar"
             style={{
               width: `${data.overall_score}%`,
-              background: "linear-gradient(to right, #0d6efd, #ff0000)",
+              background: "linear-gradient(to right, #ff0000, #0d6efd)",
             }}
           />
         </div>
       </div>
-
       <div className="row">
         {criteria.map((criterion) => (
           <div key={criterion.id} className="col-md-6 mb-4">
             <div className="card p-3 border-dark">
-              <h3 className="text-primary">{criterion.title}</h3>
+              <h3 className="">{criterion.title}</h3>
               <div className="mb-2">
                 <div className="d-flex align-items-center gap-2">
                   <span className="h4">Score:</span>
-                  <span className="h4 text-primary">{criterion.score}</span>
+                  <span
+                    className="h4"
+                    style={{ color: getGradientColor(criterion.score) }}
+                  >
+                    {criterion.score}
+                  </span>
                 </div>
                 <div className="progress" style={{ height: "10px" }}>
                   <div
                     className="progress-bar"
                     role="progressbar"
                     style={{
-                      width: `${criterion.score}%`,
-                      background: "linear-gradient(to right, #0d6efd, #ff0000)",
+                      width: `${data.overall_score}%`,
+                      background: "linear-gradient(to right, #ff0000, #0d6efd)",
                     }}
                   />
                 </div>
@@ -130,10 +152,9 @@ export default function EvaluationReport() {
           </div>
         ))}
       </div>
-
       {data.think_section && (
         <div className="mb-4 p-3 border-dark rounded thought">
-          <h3 className="text-primary">Chain-of-Thought Reasoning</h3>
+          <h3 className="moonshotBlack">Chain-of-Thought Reasoning</h3>
           <h6 className="mt-3 moonshotBlack">
             Chain-of-Thought Reasoning will break down your evaluation report
             step by step, providing clearer insights and empowering better

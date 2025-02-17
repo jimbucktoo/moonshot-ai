@@ -78,6 +78,19 @@ export default function Reasoning() {
     return <div>Criterion not found</div>;
   }
 
+  const getGradientColor = (score) => {
+    const red = { r: 255, g: 0, b: 0 };
+    const blue = { r: 13, g: 110, b: 253 };
+
+    const ratio = 1 - score / 100;
+
+    const r = Math.round(blue.r * (1 - ratio) + red.r * ratio);
+    const g = Math.round(blue.g * (1 - ratio) + red.g * ratio);
+    const b = Math.round(blue.b * (1 - ratio) + red.b * ratio);
+
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
   return (
     <Container className="py-4">
       <Button variant="primary" className="mb-3" onClick={() => navigate(-1)}>
@@ -97,7 +110,12 @@ export default function Reasoning() {
               <h1 className="moonshotWhite">{criterion.title}</h1>
               <div className="d-flex align-items-center gap-2 moonshotWhite">
                 <span className="h4">Score: </span>
-                <span className="h4 text-primary">{criterion.score}</span>
+                <span
+                  className="h4"
+                  style={{ color: getGradientColor(criterion.score) }}
+                >
+                  {criterion.score}
+                </span>
               </div>
               <div className="progress" style={{ height: "10px" }}>
                 <div
@@ -105,14 +123,14 @@ export default function Reasoning() {
                   role="progressbar"
                   style={{
                     width: `${criterion.score}%`,
-                    background: "linear-gradient(to right, #0d6efd, #ff0000)",
+                    background: "linear-gradient(to right, #ff0000, #0d6efd)", // Red at 0%, Blue at 100%
                   }}
                 />
               </div>
             </div>
           </div>
           <Card className="p-3 mt-5">
-            <h2 className="mb-2 moonshotBlue">Reasoning Analysis</h2>
+            <h2 className="mb-2 moonshotBlack">Reasoning Analysis</h2>
             <h6 className="mt-2 moonshotBlack">
               Reasoning Analysis provides a detailed breakdown of why MoonshotAI
               assigned a specific score to each criterion:
