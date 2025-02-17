@@ -4,6 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Image3 from "../assets/image3.png";
 import "../App.css";
 
 export default function ThankYou() {
@@ -92,18 +93,24 @@ export default function ThankYou() {
   return (
     <div className="d-flex min-vh-100 bg-dark align-items-center justify-content-center">
       <Card className="p-4 text-center shadow" style={{ maxWidth: "500px" }}>
-        <Card.Body>
-          <h1 className="moonshotBlue mb-3">
+        <Card.Body className="d-flex flex-column align-items-center text-center">
+          <h1 className="moonshotBlue mb-4">
             Generating Your Evaluation Report
           </h1>
-          <p className="text-secondary mb-4">
-            We're processing your responses to create valuable insights for
-            you...
-          </p>
           {loading && (
-            <Spinner animation="border" variant="primary" role="status" />
+            <Spinner
+              className="mb-4"
+              animation="border"
+              variant="primary"
+              role="status"
+            />
           )}
           {error && <p className="text-danger">{error}</p>}
+          <p className="text-secondary mb-4">
+            We're processing your responses to create valuable insights for you!
+            This may take a few minutes.
+          </p>
+          <img src={Image3} alt="Startup illustration" height={300} />
         </Card.Body>
       </Card>
     </div>
