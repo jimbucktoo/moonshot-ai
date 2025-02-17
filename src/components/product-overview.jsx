@@ -84,27 +84,27 @@ export default function ProductOverview() {
               {[
                 {
                   value:
-                    "Ideation Stage - Pre-seed Stage, Problem-solution fit, Conducting market research, Prototyping and validating the idea",
+                    "Ideation Stage (Pre-Seed Stage): Defining the problem-solution fit, conducting market research, prototyping, and validating the idea.",
                   label:
-                    "Ideation Stage - Pre-seed Stage, Problem-solution fit, Conducting market research, Prototyping and validating the idea",
+                    "Ideation Stage (Pre-Seed Stage): Defining the problem-solution fit, conducting market research, prototyping, and validating the idea.",
                 },
                 {
                   value:
-                    "Early Stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
+                    "Early Stage (Seed Stage): Developing a Minimum Viable Product (MVP) and preparing for initial launch.",
                   label:
-                    "Early Stage - Seed Stage, Developing a Minimum Viable Product (MVP)",
+                    "Early Stage (Seed Stage): Developing a Minimum Viable Product (MVP) and preparing for initial launch.",
                 },
                 {
                   value:
-                    "Growth Stage - Series A & B, Achieved product-market fit",
+                    "Growth Stage (Series A & B): Achieved product-market fit, scaling operations, and expanding customer adoption.",
                   label:
-                    "Growth Stage - Series A & B, Achieved product-market fit",
+                    "Growth Stage (Series A & B): Achieved product-market fit, scaling operations, and expanding customer adoption.",
                 },
                 {
                   value:
-                    "Scale Stage - Series C and Beyond, Rapid scaling and expansion",
+                    "Scale Stage (Series C and Beyond): Rapid scaling, market expansion, and organizational growth.",
                   label:
-                    "Scale Stage - Series C and Beyond, Rapid scaling and expansion",
+                    "Scale Stage (Series C and Beyond): Rapid scaling, market expansion, and organizational growth.",
                 },
               ].map((stage) => (
                 <Form.Check
