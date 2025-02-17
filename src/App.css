@@ -1,7 +1,3 @@
-.content {
-  margin-top: 30px;
-}
-
 .mainContent {
   background-color: #000000;
   color: #FFFFFF;
@@ -9,5 +5,34 @@
 }
 
 .moonshotBlue {
-  color: #0d6efd;
+  color: #0d6efd !important;
+}
+
+.moonshotBlack {
+  color: #000000 !important;
+}
+
+.moonshotWhite {
+  color: #FFFFFF !important;
+}
+
+.moonshotBgBlue {
+  background-color: #0d6efd !important;
+}
+
+.moonshotBgBlack {
+  background-color: #000000 !important;
+}
+
+.moonshotBgWhite {
+  background-color: #FFFFFF !important;
+}
+
+.reasoning {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.thought {
+  background-color: #FFFFFF;
 }

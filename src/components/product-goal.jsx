@@ -25,7 +25,7 @@ export default function ProductGoal() {
       <Col md={3} className="p-3">
         <SurveyProgress currentStep={2} />
       </Col>
-      <Col md={9} className="p-4 content">
+      <Col md={9} className="p-4 mt-4">
         <Form
           onSubmit={handleSubmit}
           className="mx-auto"

@@ -4,6 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../App.css";
 
 export default function ThankYou() {
   const { formData, setEvaluationResponse } = useSurvey();

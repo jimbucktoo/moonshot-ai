@@ -1,78 +1,99 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSurvey } from "../SurveyContext";
+import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 export default function EvaluationReport() {
   const { evaluationResponse } = useSurvey();
+  const navigate = useNavigate();
+
+  const defaultData = {
+    overall_score: 75,
+    score_criteria1: 80,
+    score_criteria2: 70,
+    score_criteria3: 85,
+    score_criteria4: 60,
+    score_criteria5: 78,
+    score_criteria6: 88,
+    improvement_suggestion_criteria1:
+      "Ensure all required fields are completed.",
+    improvement_suggestion_criteria2:
+      "Provide stronger validation with market data.",
+    improvement_suggestion_criteria3: "Expand on target audience analysis.",
+    improvement_suggestion_criteria4:
+      "Highlight unique selling points more clearly.",
+    improvement_suggestion_criteria5: "Clarify monetization strategies.",
+    improvement_suggestion_criteria6: "Showcase team experience and expertise.",
+    think_section:
+      "Criteria 1: Needs a stronger foundation. Summary: Improve documentation.\nCriteria 2: Validation lacks depth. Summary: Conduct more user tests.",
+  };
+
+  const data = evaluationResponse || defaultData;
+
   const criteria = [
     {
       id: 1,
       title: "Application Completeness",
-      score: evaluationResponse.score_criteria1,
-      description: evaluationResponse.improvement_suggestion_criteria1,
+      score: data.score_criteria1,
+      description: data.improvement_suggestion_criteria1,
     },
     {
       id: 2,
       title: "Product Validation",
-      score: evaluationResponse.score_criteria2,
-      description: evaluationResponse.improvement_suggestion_criteria2,
+      score: data.score_criteria2,
+      description: data.improvement_suggestion_criteria2,
     },
     {
       id: 3,
       title: "Market Size",
-      score: evaluationResponse.score_criteria3,
-      description: evaluationResponse.improvement_suggestion_criteria3,
+      score: data.score_criteria3,
+      description: data.improvement_suggestion_criteria3,
     },
     {
       id: 4,
       title: "Competitive Edge",
-      score: evaluationResponse.score_criteria4,
-      description: evaluationResponse.improvement_suggestion_criteria4,
+      score: data.score_criteria4,
+      description: data.improvement_suggestion_criteria4,
     },
     {
       id: 5,
       title: "Business Model",
-      score: evaluationResponse.score_criteria5,
-      description: evaluationResponse.improvement_suggestion_criteria5,
+      score: data.score_criteria5,
+      description: data.improvement_suggestion_criteria5,
     },
     {
       id: 6,
       title: "Team Strength",
-      score: evaluationResponse.score_criteria6,
-      description: evaluationResponse.improvement_suggestion_criteria6,
+      score: data.score_criteria6,
+      description: data.improvement_suggestion_criteria6,
     },
   ];
 
-  const calculateOverallScore = () => {
-    const total = criteria.reduce((acc, curr) => acc + curr.score, 0);
-    return Math.round(total / criteria.length);
-  };
-
   useEffect(() => {
-    if (evaluationResponse) {
-      console.log("Evaluation Report:", evaluationResponse);
-      console.log(evaluationResponse.think_section);
-    }
-  }, [evaluationResponse]);
+    console.log("Evaluation Report:", data);
+  }, [data]);
 
   return (
     <div className="container py-5">
-      <h1 className="mb-4">Evaluation Report</h1>
+      <Button variant="primary" className="mb-3" onClick={() => navigate("/")}>
+        Start a New Evaluation
+      </Button>
+      <h1 className="mb-4 mt-3 moonshotWhite">Evaluation Report</h1>
       <div className="mb-4">
         <div className="d-flex align-items-center gap-3 mb-3">
-          <span className="h5">Overall Score:</span>
-          <span className="display-4 text-primary">
-            {evaluationResponse.overall_score}
+          <span className="moonshotWhite">
+            <h5>Overall Score:</h5>
           </span>
+          <span className="display-4 text-primary">{data.overall_score}</span>
         </div>
         <div className="progress" style={{ height: "10px" }}>
           <div
             className="progress-bar"
             role="progressbar"
             style={{
-              width: `${evaluationResponse.overall_score}%`,
+              width: `${data.overall_score}%`,
               background: "linear-gradient(to right, #0d6efd, #ff0000)",
             }}
           />
@@ -82,11 +103,11 @@ export default function EvaluationReport() {
       <div className="row">
         {criteria.map((criterion) => (
           <div key={criterion.id} className="col-md-6 mb-4">
-            <div className="card p-3 border-primary">
+            <div className="card p-3 border-dark">
               <h3 className="text-primary">{criterion.title}</h3>
               <div className="mb-2">
                 <div className="d-flex align-items-center gap-2">
-                  <span>Score:</span>
+                  <span className="h4">Score:</span>
                   <span className="h4 text-primary">{criterion.score}</span>
                 </div>
                 <div className="progress" style={{ height: "10px" }}>
@@ -100,88 +121,25 @@ export default function EvaluationReport() {
                   />
                 </div>
               </div>
-              <h6>Improvement Suggestions:</h6>
+              <h6 className="mt-2">Improvement Suggestions:</h6>
               <p className="text-muted">{criterion.description}</p>
               <Link to={`/reasoning/${criterion.id}`}>
-                <Button variant="outline-primary">Reasoning Analysis</Button>
+                <Button variant="primary">Reasoning Analysis</Button>
               </Link>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Reasoning Section with Proper Formatting */}
-      {evaluationResponse.think_section && (
-        <div className="mb-4 p-3 border rounded bg-light">
-          <h5 className="text-primary">Chain-of-Thought Reasoning</h5>
-
-          {(() => {
-            // Match "Criteria X:" to split into sections while keeping the intro
-            const matches = Array.from(
-              evaluationResponse.think_section.matchAll(/(Criteria \d+:)/g)
-            );
-
-            if (matches.length === 0) {
-              // No criteria found, just display the whole text as a paragraph
-              return (
-                <p className="text-muted">
-                  {evaluationResponse.think_section.trim()}
-                </p>
-              );
-            }
-
-            const introText = evaluationResponse.think_section
-              .slice(0, matches[0].index)
-              .trim();
-            const criteriaSections = matches.map((match, i) => {
-              const start = match.index;
-              const end = matches[i + 1]
-                ? matches[i + 1].index
-                : evaluationResponse.think_section.length;
-
-              // Extract full criteria text
-              const criteriaText = evaluationResponse.think_section
-                .slice(start + match[1].length, end)
-                .trim();
-
-              // Check if the text contains a "Summary:"
-              const summaryIndex = criteriaText.indexOf("Summary:");
-
-              if (summaryIndex !== -1) {
-                // Split main explanation and summary
-                const explanation = criteriaText.slice(0, summaryIndex).trim();
-                const summary = criteriaText.slice(summaryIndex).trim();
-
-                return (
-                  <React.Fragment key={`criteria-${i}`}>
-                    <li>
-                      <strong>{match[1]}</strong> {explanation}
-                    </li>
-                    <li>
-                      <strong>{summary.split(":")[0]}:</strong>{" "}
-                      {summary.split(":").slice(1).join(":").trim()}
-                    </li>
-                  </React.Fragment>
-                );
-              } else {
-                // No summary found, push entire criteria text
-                return (
-                  <li key={`criteria-${i}`}>
-                    <strong>{match[1]}</strong> {criteriaText}
-                  </li>
-                );
-              }
-            });
-
-            return (
-              <>
-                {/* Display the intro as a paragraph */}
-                <p className="text-muted">{introText}</p>
-                {/* Display criteria and summaries as a bullet list */}
-                <ul className="text-muted">{criteriaSections}</ul>
-              </>
-            );
-          })()}
+      {data.think_section && (
+        <div className="mb-4 p-3 border-dark rounded thought">
+          <h3 className="text-primary">Chain-of-Thought Reasoning</h3>
+          <h6 className="mt-3 moonshotBlack">
+            Chain-of-Thought Reasoning will break down your evaluation report
+            step by step, providing clearer insights and empowering better
+            decision-making:
+          </h6>
+          <p className="text-muted">{data.think_section}</p>
         </div>
       )}
     </div>

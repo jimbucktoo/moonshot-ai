@@ -12,7 +12,7 @@ export function SurveyProgress({ currentStep }) {
   ];
 
   return (
-    <Card className="p-3 bg-white border-0" style={{ width: "280px" }}>
+    <Card className="p-3 mt-4 bg-white border-0" style={{ width: "280px" }}>
       <Card.Body>
         <Card.Title className="text-center fw-bold mb-3 text-primary">
           Analyze Your Startup Potential
