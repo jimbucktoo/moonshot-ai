@@ -1,4 +1,5 @@
 import { ProgressBar, ListGroup, Card } from "react-bootstrap";
+import Image5 from "../assets/image5.png";
 import "../App.css";
 
 export function SurveyProgress({ currentStep }) {
@@ -12,8 +13,11 @@ export function SurveyProgress({ currentStep }) {
   ];
 
   return (
-    <Card className="p-3 mt-4 bg-white border-0" style={{ width: "280px" }}>
-      <Card.Body>
+    <Card
+      className="p-3 mt-4 mb-4 moonshotBgWhite border-0"
+      style={{ width: "280px" }}
+    >
+      <Card.Body className="align-items-center text-center">
         <Card.Title className="text-center fw-bold mb-3 text-primary">
           Analyze Your Startup Potential
         </Card.Title>
@@ -57,9 +61,10 @@ export function SurveyProgress({ currentStep }) {
         <ProgressBar
           now={(currentStep / steps.length) * 100}
           variant="primary"
-          className="mt-3 border-0"
+          className="mt-3 mb-3 border-0"
           animated
         />
+        <img src={Image5} alt="Startup illustration" height={200} />
       </Card.Body>
     </Card>
   );
