@@ -6,7 +6,7 @@ import InnovationFeasibility from "./components/innovation-feasibility";
 import TeamOrganization from "./components/team-organization";
 import BusinessModel from "./components/business-model";
 import PartnershipsSupport from "./components/partnerships-support";
-import ThankYou from "./components/thank-you";
+import Evaluating from "./components/evaluating";
 import Report from "./components/report";
 import Reasoning from "./components/reasoning";
 import { SurveyProvider } from "./SurveyContext";
@@ -25,7 +25,7 @@ function App() {
         <Route path="/team-organization" element={<TeamOrganization />} />
         <Route path="/business-model" element={<BusinessModel />} />
         <Route path="/partnerships-support" element={<PartnershipsSupport />} />
-        <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/evaluating" element={<Evaluating />} />
         <Route path="/report" element={<Report />} />
         <Route path="/reasoning/:id" element={<Reasoning />} />
       </Routes>

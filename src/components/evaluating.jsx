@@ -7,7 +7,7 @@ import axios from "axios";
 import Image3 from "../assets/image3.png";
 import "../App.css";
 
-export default function ThankYou() {
+export default function Evaluating() {
   const { formData, setEvaluationResponse } = useSurvey();
   const navigate = useNavigate();
 
@@ -98,12 +98,38 @@ export default function ThankYou() {
             Generating Your Evaluation Report
           </h1>
           {loading && (
-            <Spinner
-              className="mb-4"
-              animation="border"
-              variant="primary"
-              role="status"
-            />
+            <div>
+              <Spinner
+                className="mx-2 mb-4"
+                animation="grow"
+                variant="primary"
+                role="status"
+              />
+              <Spinner
+                className="mx-2 mb-4"
+                animation="grow"
+                variant="primary"
+                role="status"
+              />
+              <Spinner
+                className="mx-2 mb-4"
+                animation="grow"
+                variant="primary"
+                role="status"
+              />
+              <Spinner
+                className="mx-2 mb-4"
+                animation="grow"
+                variant="primary"
+                role="status"
+              />
+              <Spinner
+                className="mx-2 mb-4"
+                animation="grow"
+                variant="primary"
+                role="status"
+              />
+            </div>
           )}
           {error && <p className="text-danger">{error}</p>}
           <p className="text-secondary mb-4">
