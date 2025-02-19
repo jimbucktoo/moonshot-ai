@@ -31,14 +31,10 @@ export default function InnovationFeasibility() {
           style={{ maxWidth: "800px" }}
         >
           <Form.Group className="mb-3">
-            <Form.Label>
-              What makes your product innovative?{" "}
-              <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>What makes your product innovative?</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your product's innovative aspects"
-              required
               value={formData.innovation}
               onChange={(e) =>
                 setFormData({ ...formData, innovation: e.target.value })
@@ -49,12 +45,11 @@ export default function InnovationFeasibility() {
           <Form.Group className="mb-3">
             <Form.Label>
               How feasible is your product in terms of technology, market
-              demand, and execution? <span className="text-danger">*</span>
+              demand, and execution?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Explain the feasibility of your product"
-              required
               value={formData.feasibility}
               onChange={(e) =>
                 setFormData({ ...formData, feasibility: e.target.value })
@@ -65,12 +60,11 @@ export default function InnovationFeasibility() {
           <Form.Group className="mb-3">
             <Form.Label>
               What are the main challenges in developing and launching your
-              product? <span className="text-danger">*</span>
+              product?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="List the main challenges"
-              required
               value={formData.challenges}
               onChange={(e) =>
                 setFormData({ ...formData, challenges: e.target.value })

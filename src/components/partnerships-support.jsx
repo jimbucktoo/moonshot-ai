@@ -33,12 +33,11 @@ export default function PartnershipsSupport() {
           <Form.Group className="mb-3">
             <Form.Label>
               Do you have any strategic partnerships? If so, how do they
-              contribute to your success? <span className="text-danger">*</span>
+              contribute to your success?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your partnerships and their contributions"
-              required
               value={formData.partnerships}
               onChange={(e) =>
                 setFormData({ ...formData, partnerships: e.target.value })
@@ -48,13 +47,11 @@ export default function PartnershipsSupport() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What support do you need to achieve your goals?{" "}
-              <span className="text-danger">*</span>
+              What support do you need to achieve your goals?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe the support you need"
-              required
               value={formData.support}
               onChange={(e) =>
                 setFormData({ ...formData, support: e.target.value })
@@ -64,13 +61,11 @@ export default function PartnershipsSupport() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              How much funding do you need, and how will you allocate it?{" "}
-              <span className="text-danger">*</span>
+              How much funding do you need, and how will you allocate it?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your funding needs and plans for allocation"
-              required
               value={formData.funding}
               onChange={(e) =>
                 setFormData({ ...formData, funding: e.target.value })

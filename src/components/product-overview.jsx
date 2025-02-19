@@ -29,13 +29,11 @@ export default function ProductOverview() {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>
-              Can you provide a brief summary of your product?{" "}
-              <span className="text-danger">*</span>
+              Can you provide a brief summary of your product?
             </Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter a brief description of your product"
-              required
               value={formData.summary}
               onChange={(e) =>
                 setFormData({ ...formData, summary: e.target.value })
@@ -46,12 +44,11 @@ export default function ProductOverview() {
           <Form.Group className="mb-3">
             <Form.Label>
               Who are your target users, and how many are currently using the
-              product? <span className="text-danger">*</span>
+              product?
             </Form.Label>
             <Form.Control
               type="text"
               placeholder="Describe your target users and current user base"
-              required
               value={formData.users}
               onChange={(e) =>
                 setFormData({ ...formData, users: e.target.value })
@@ -62,13 +59,11 @@ export default function ProductOverview() {
           <Form.Group className="mb-3">
             <Form.Label>
               What specific problem does your product solve, and how does it
-              address this issue for users?{" "}
-              <span className="text-danger">*</span>
+              address this issue for users?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Explain the problem your product addresses and how it provides a solution"
-              required
               value={formData.problem}
               onChange={(e) =>
                 setFormData({ ...formData, problem: e.target.value })
@@ -78,8 +73,7 @@ export default function ProductOverview() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What stage of development is your product in?{" "}
-              <span className="text-danger">*</span>
+              What stage of development is your product in?
             </Form.Label>
             <div>
               {[

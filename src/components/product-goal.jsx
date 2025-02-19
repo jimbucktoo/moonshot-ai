@@ -32,14 +32,10 @@ export default function ProductGoal() {
           style={{ maxWidth: "800px" }}
         >
           <Form.Group className="mb-3">
-            <Form.Label>
-              What is the primary goal of your product?{" "}
-              <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>What is the primary goal of your product?</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your product's main goal"
-              required
               value={formData.goal}
               onChange={(e) =>
                 setFormData({ ...formData, goal: e.target.value })
@@ -48,14 +44,10 @@ export default function ProductGoal() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>
-              How do you plan to achieve this goal?{" "}
-              <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>How do you plan to achieve this goal?</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Outline your plan"
-              required
               value={formData.plan}
               onChange={(e) =>
                 setFormData({ ...formData, plan: e.target.value })
@@ -65,13 +57,11 @@ export default function ProductGoal() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What are the key milestones in your roadmap?{" "}
-              <span className="text-danger">*</span>
+              What are the key milestones in your roadmap?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="List your key milestones"
-              required
               value={formData.milestones}
               onChange={(e) =>
                 setFormData({ ...formData, milestones: e.target.value })

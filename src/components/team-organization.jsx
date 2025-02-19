@@ -31,14 +31,10 @@ export default function TeamOrganization() {
           style={{ maxWidth: "800px" }}
         >
           <Form.Group className="mb-3">
-            <Form.Label>
-              Who are the key members of your team?{" "}
-              <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>Who are the key members of your team?</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="List your key team members"
-              required
               value={formData.teamMembers}
               onChange={(e) =>
                 setFormData({ ...formData, teamMembers: e.target.value })
@@ -48,13 +44,11 @@ export default function TeamOrganization() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What are their primary roles and responsibilities in the project?{" "}
-              <span className="text-danger">*</span>
+              What are their primary roles and responsibilities in the project?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe roles and responsibilities"
-              required
               value={formData.roles}
               onChange={(e) =>
                 setFormData({ ...formData, roles: e.target.value })
@@ -64,13 +58,11 @@ export default function TeamOrganization() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What relevant experience does your team bring to this project?{" "}
-              <span className="text-danger">*</span>
+              What relevant experience does your team bring to this project?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your team's relevant experience"
-              required
               value={formData.experience}
               onChange={(e) =>
                 setFormData({ ...formData, experience: e.target.value })

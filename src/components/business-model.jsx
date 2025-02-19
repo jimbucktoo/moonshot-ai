@@ -31,13 +31,10 @@ export default function BusinessModel() {
           style={{ maxWidth: "800px" }}
         >
           <Form.Group className="mb-3">
-            <Form.Label>
-              What is your revenue model? <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>What is your revenue model?</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your revenue model"
-              required
               value={formData.revenueModel}
               onChange={(e) =>
                 setFormData({ ...formData, revenueModel: e.target.value })
@@ -47,13 +44,11 @@ export default function BusinessModel() {
 
           <Form.Group className="mb-3">
             <Form.Label>
-              What is your strategy for acquiring and retaining customers?{" "}
-              <span className="text-danger">*</span>
+              What is your strategy for acquiring and retaining customers?
             </Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Describe your customer acquisition and retention strategy"
-              required
               value={formData.customerAcquisition}
               onChange={(e) =>
                 setFormData({
@@ -65,14 +60,10 @@ export default function BusinessModel() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form.Label>
-              What is the size of your target market?{" "}
-              <span className="text-danger">*</span>
-            </Form.Label>
+            <Form.Label>What is the size of your target market?</Form.Label>
             <Form.Control
               type="text"
               placeholder="Estimate your target market size"
-              required
               value={formData.marketSize}
               onChange={(e) =>
                 setFormData({ ...formData, marketSize: e.target.value })
