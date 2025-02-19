@@ -9,22 +9,26 @@ export default function Moonshot() {
     <main className="moonshot">
       <Container className="py-4">
         <Row className="align-items-center">
-          <Col md={6} className="text-center text-md-start">
+          <Col md={8} className="text-center text-md-start">
             <img src={Logo} alt="MoonshotAI Logo" width={360} />
-            <h1>Turn Your Startup Idea into Reality</h1>
+            <h1>
+              The <span className="highlight">AI-Powered Evaluator</span> for{" "}
+              <span className="highlight">Startup Success</span>
+            </h1>
             <br />
-            <h1>🌖</h1>
-            <h1>🚀</h1>
+            <h1>🚀 🌖</h1>
             <br />
             <div className="my-1">
-              <h2>Insightful Evaluations.</h2>
-              <h2>Smarter Decisions.</h2>
-              <h2>Better Outcomes.</h2>
+              <h2>Transform Your Startup Idea into Reality</h2>
+              <br />
+              <h3>Actionable Insights.</h3>
+              <h3>Smarter Decisions.</h3>
+              <h3>Greater Success.</h3>
             </div>
             <br />
             <p className="lead">
-              Discover your startup's true potential with detailed, AI-powered
-              insights.
+              Unlock your startup’s true potential with AI-powered evaluations
+              for smarter, data-driven decisions.
             </p>
             <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
               <Link to="/product-overview">
@@ -34,8 +38,13 @@ export default function Moonshot() {
               </Link>
             </div>
           </Col>
-          <Col md={6} className="d-none d-md-block text-center">
-            <img src={Image1} alt="Startup illustration" height={480} />
+          <Col md={4} className="d-none d-md-block text-center">
+            <img
+              className="moonshotImage"
+              src={Image1}
+              alt="Startup illustration"
+              height={480}
+            />
           </Col>
         </Row>
       </Container>
