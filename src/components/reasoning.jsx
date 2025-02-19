@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button, Container, Card, ListGroup, Image } from "react-bootstrap";
-import Image4 from "../assets/image4.png";
+import Image3 from "../assets/image3.png";
 import { useSurvey } from "../SurveyContext";
 import "../App.css";
 
@@ -99,12 +99,7 @@ export default function Reasoning() {
       <Card className="moonshotBgBlack mt-3 border-0">
         <Card.Body>
           <div className="d-flex align-items-center mb-3">
-            <Image
-              src={Image4}
-              alt="Criterion illustration"
-              height={240}
-              roundedCircle
-            />
+            <Image src={Image3} alt="Moonshot Man" height={240} roundedCircle />
             <div className="ms-2">
               <h1 className="moonshotWhite">{criterion.title}</h1>
               <div className="d-flex align-items-center gap-2 moonshotWhite">

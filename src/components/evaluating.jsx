@@ -4,7 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { useSurvey } from "../SurveyContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Image3 from "../assets/image3.png";
+import Image2 from "../assets/image2.png";
 import "../App.css";
 
 export default function Evaluating() {
@@ -137,7 +137,7 @@ export default function Evaluating() {
             <br />
             This may take a moment as we dive deep into the details.
           </p>
-          <img src={Image3} alt="Startup illustration" height={300} />
+          <img src={Image2} alt="Moonshot Man" height={300} />
         </Card.Body>
       </Card>
     </div>

@@ -42,7 +42,7 @@ export default function Moonshot() {
             <img
               className="moonshotImage"
               src={Image1}
-              alt="Startup illustration"
+              alt="Moonshot Man"
               height={480}
             />
           </Col>

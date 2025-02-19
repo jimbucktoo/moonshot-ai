@@ -1,5 +1,5 @@
 import { ProgressBar, ListGroup, Card } from "react-bootstrap";
-import Image5 from "../assets/image5.png";
+import Image4 from "../assets/image4.png";
 import "../App.css";
 
 export function SurveyProgress({ currentStep }) {
@@ -64,7 +64,7 @@ export function SurveyProgress({ currentStep }) {
           className="mt-3 mb-3 border-0"
           animated
         />
-        <img src={Image5} alt="Startup illustration" height={200} />
+        <img src={Image4} alt="Moonshot Man" height={200} />
       </Card.Body>
     </Card>
   );
