@@ -5,7 +5,7 @@ import "../App.css";
 export function SurveyProgress({ currentStep }) {
   const steps = [
     { id: 1, name: "Product Overview" },
-    { id: 2, name: "Product Goal & Plan" },
+    { id: 2, name: "Product Goal" },
     { id: 3, name: "Innovation & Feasibility" },
     { id: 4, name: "Team & Organization" },
     { id: 5, name: "Business Model" },
