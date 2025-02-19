@@ -50,7 +50,7 @@ export function SurveyProgress({ currentStep }) {
                 {step.id < currentStep ? "✓" : step.id}
               </div>
               <span
-                className={`fw-semibold ms-3 ${step.id <= currentStep ? "text-dark" : "text-muted"}`}
+                className={`fw-semibold ms-3 w-100 text-center ${step.id <= currentStep ? "text-dark" : "text-muted"}`}
               >
                 {step.name}
               </span>
