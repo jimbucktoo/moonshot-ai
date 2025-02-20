@@ -26,27 +26,32 @@ export default function Evaluating() {
   const keyMap = {
     challenges:
       "What are the main challenges in developing and launching your product?",
-    customerAcquisition: "How do you plan to acquire and retain customers?",
-    experience: "What relevant experience does your team have?",
-    feasibility: "How feasible is your product?",
-    funding: "How much funding do you need and how do you plan to use it?",
-    goal: "What is the goal of your product?",
-    innovation: "How is your product innovative?",
+    customerAcquisition:
+      "What is your strategy for acquiring and retaining customers?",
+    experience:
+      "What relevant experience does your team bring to this project?",
+    feasibility:
+      "How feasible is your product in terms of technology, market demand, and execution?",
+    funding: "How much funding do you need, and how will you allocate it?",
+    goal: "What is the primary goal of your product?",
+    innovation: "What makes your product innovative?",
     marketSize: "What is the size of your target market?",
-    milestones: "What are the key milestones in your plan?",
+    milestones: "What are the key milestones in your roadmap?",
     partnerships:
-      "Do you have any strategic partnerships? If so, describe them.",
-    plan: "What is your plan to achieve this goal?",
+      "Do you have any strategic partnerships? If so, how do they contribute to your success?",
+    plan: "How do you plan to achieve this goal?",
     problem:
-      "What specific problem are you solving? How does it solve the problem for your users?",
-    prototype: "Upload the link or file if there is a prototype or demo.",
+      "What specific problem does your product solve, and how does it address this issue for users?",
+    prototype:
+      "Do you have a prototype or demo? If so, please share the link or file.",
     revenueModel: "What is your revenue model?",
-    roles: "What are their roles and responsibilities?",
-    stage: "What is your product stage now?",
-    summary: "Provide a one-line summary of your product.",
-    support: "What kind of support do you need to succeed?",
+    roles: "What are their primary roles and responsibilities in the project?",
+    stage: "What stage of development is your product in?",
+    summary: "Can you provide a brief summary of your product?",
+    support: "What support do you need to achieve your goals?",
     teamMembers: "Who are the key members of your team?",
-    users: "Who are your users? How many users does the product serve now?",
+    users:
+      "Who are your target users, and how many are currently using the product?",
   };
 
   useEffect(() => {
