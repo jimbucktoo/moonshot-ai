@@ -8,23 +8,24 @@ export default function Reasoning() {
   const { evaluationResponse } = useSurvey();
 
   const defaultData = {
-    score_criteria1: 80,
-    score_criteria2: 70,
-    score_criteria3: 85,
+    score_criteria1: 90,
+    score_criteria2: 30,
+    score_criteria3: 70,
     score_criteria4: 60,
-    score_criteria5: 78,
-    score_criteria6: 88,
+    score_criteria5: 50,
+    score_criteria6: 60,
     summary_reasoning_criteria1:
-      "Application completeness needs better documentation.",
+      "Application provides complete English responses to all 20 questions with prototype link. Formatting complies with requirements.",
     summary_reasoning_criteria2:
-      "Product validation requires more market research.",
-    summary_reasoning_criteria3: "Market size analysis lacks depth.",
+      'Self-declared as "Ideation Stage (Pre-Seed)" with Figma prototype but no active users/testing data. Lacks evidence of prototype validation or user traction.',
+    summary_reasoning_criteria3:
+      "Cited $300B annual startup investments and 20M startups as TAM, but lacks source citations for market size figures. No Google Trends/funding trend analysis shown.",
     summary_reasoning_criteria4:
-      "Competitive edge should be more clearly defined.",
+      "Differentiates through AI evaluations but lacks direct competitor analysis. Claims technical advantage without patent/Copyright documentation.",
     summary_reasoning_criteria5:
-      "Business model needs a stronger revenue projection.",
+      "Proposed subscription/equity models remain untested. No evidence of paying users or recurring revenue validation.",
     summary_reasoning_criteria6:
-      "Team strength should highlight expertise more explicitly.",
+      "Core technical competencies covered but team lacks scaled startup experience. No prior exits or investor networks demonstrated.",
   };
 
   const data = evaluationResponse || defaultData;

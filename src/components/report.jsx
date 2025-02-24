@@ -11,24 +11,27 @@ export default function EvaluationReport() {
   const navigate = useNavigate();
 
   const defaultData = {
-    overall_score: 75,
-    score_criteria1: 80,
-    score_criteria2: 70,
-    score_criteria3: 85,
+    overall_score: 60,
+    score_criteria1: 90,
+    score_criteria2: 30,
+    score_criteria3: 70,
     score_criteria4: 60,
-    score_criteria5: 78,
-    score_criteria6: 88,
+    score_criteria5: 50,
+    score_criteria6: 60,
     improvement_suggestion_criteria1:
-      "Ensure all required fields are completed.",
+      "No improvements needed for completeness or language compliance.",
     improvement_suggestion_criteria2:
-      "Provide stronger validation with market data.",
-    improvement_suggestion_criteria3: "Expand on target audience analysis.",
+      "Conduct closed beta tests with real startups, collect quantitative user feedback, and demonstrate operational progress beyond conceptual design.",
+    improvement_suggestion_criteria3:
+      "Include third-party market research citations and comparative analysis of rising demand through search/funding trends.",
     improvement_suggestion_criteria4:
-      "Highlight unique selling points more clearly.",
-    improvement_suggestion_criteria5: "Clarify monetization strategies.",
-    improvement_suggestion_criteria6: "Showcase team experience and expertise.",
+      "Conduct SWOT analysis against existing AI evaluation tools (e.g., Zirra, PitchBook) and document proprietary AI architecture as moat.",
+    improvement_suggestion_criteria5:
+      "Validate pricing through pre-orders/pilot contracts with accelerators. Add freemium-to-paid conversion metrics to roadmap.",
+    improvement_suggestion_criteria6:
+      "Recruit advisor with accelerator/VC industry experience. Add UX researcher role to strengthen user feedback loops.",
     think_section:
-      "Criteria 1: Needs a stronger foundation. Summary: Improve documentation.\nCriteria 2: Validation lacks depth. Summary: Conduct more user tests.",
+      "Okay, let's start by evaluating the startup idea based on the given criteria. First, Criteria 1 checks if the application is complete and in English. The provided answers are all in English, and they've answered all 20 questions. There's a Figma link for the prototype, which is acceptable. So, this seems complete. Maybe a high score here, like 90. Criteria 2 is about product validation. The startup is in the Ideation/Pre-Seed stage, which is just concept. They mention a prototype and a Figma link, but no user testing or traction. The answer about current users says they don't have any yet. So, they're still at concept, not even prototype. That would be a low score, maybe 30. The summary would note the lack of active users or testing. Criteria 3 assesses market size. They mention 20 million startups and $300 billion invested annually. That's a large TAM. But they don't provide sources for these numbers. Also, using Google Trends or funding data isn't shown. So, maybe a 70 because the market is big, but validation is lacking. Criteria 4 is about competition. They compare to traditional accelerators but don't list direct competitors. They mention AI-driven evaluations as a differentiator, but is that enough? The moat isn't clear. Maybe a 60, as they have some differentiation but unclear competitive analysis. Criteria 5 looks at the business model. They have a subscription model, equity stakes, and premium services. However, no evidence of user payments or recurring revenue yet. Since they're pre-revenue, this is uncertain. Score around 50. Criteria 6 evaluates the team. The team has relevant experience in AI, product management, and development. But the team is small, and there's no mention of prior successful exits or scaling experience. So, maybe 60. They have the skills but limited track record. Overall average would be the average of all scores: (90 +30 +70 +60 +50 +60)/6 = 60. So, 60 overall.",
   };
 
   const data = evaluationResponse || defaultData;
