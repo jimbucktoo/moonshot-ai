@@ -145,12 +145,12 @@ export default function EvaluationReport() {
   };
 
   const bulletChainOfThoughtItems = [
-    { label: "Criteria 1", text: data.criteria1 },
-    { label: "Criteria 2", text: data.criteria2 },
-    { label: "Criteria 3", text: data.criteria3 },
-    { label: "Criteria 4", text: data.criteria4 },
-    { label: "Criteria 5", text: data.criteria5 },
-    { label: "Criteria 6", text: data.criteria6 },
+    { label: "Application Completeness", text: data.criteria1 },
+    { label: "Product Validation", text: data.criteria2 },
+    { label: "Market Size", text: data.criteria3 },
+    { label: "Competitive Edge", text: data.criteria4 },
+    { label: "Business Model", text: data.criteria5 },
+    { label: "Team Strength", text: data.criteria6 },
   ];
 
   return (
