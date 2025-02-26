@@ -30,8 +30,22 @@ export default function EvaluationReport() {
       "Validate pricing through pre-orders/pilot contracts with accelerators. Add freemium-to-paid conversion metrics to roadmap.",
     improvement_suggestion_criteria6:
       "Recruit advisor with accelerator/VC industry experience. Add UX researcher role to strengthen user feedback loops.",
-    think_section:
-      "Okay, let's start by evaluating the startup idea based on the given criteria. First, Criteria 1 checks if the application is complete and in English. The provided answers are all in English, and they've answered all 20 questions. There's a Figma link for the prototype, which is acceptable. So, this seems complete. Maybe a high score here, like 90. Criteria 2 is about product validation. The startup is in the Ideation/Pre-Seed stage, which is just concept. They mention a prototype and a Figma link, but no user testing or traction. The answer about current users says they don't have any yet. So, they're still at concept, not even prototype. That would be a low score, maybe 30. The summary would note the lack of active users or testing. Criteria 3 assesses market size. They mention 20 million startups and $300 billion invested annually. That's a large TAM. But they don't provide sources for these numbers. Also, using Google Trends or funding data isn't shown. So, maybe a 70 because the market is big, but validation is lacking. Criteria 4 is about competition. They compare to traditional accelerators but don't list direct competitors. They mention AI-driven evaluations as a differentiator, but is that enough? The moat isn't clear. Maybe a 60, as they have some differentiation but unclear competitive analysis. Criteria 5 looks at the business model. They have a subscription model, equity stakes, and premium services. However, no evidence of user payments or recurring revenue yet. Since they're pre-revenue, this is uncertain. Score around 50. Criteria 6 evaluates the team. The team has relevant experience in AI, product management, and development. But the team is small, and there's no mention of prior successful exits or scaling experience. So, maybe 60. They have the skills but limited track record. Overall average would be the average of all scores: (90 +30 +70 +60 +50 +60)/6 = 60. So, 60 overall.",
+    introduction:
+      'The proposal "Test" lacks all required elements for proper evaluation across all criteria. Each criterion fails due to insufficient information.',
+    criteria1:
+      "Single-word response violates completeness requirements. No answers to 20 questions, making evaluation impossible.",
+    criteria2:
+      "Absence of stage declaration, user metrics, or operational evidence indicates pure conceptual status.",
+    criteria3:
+      "Zero market sizing data prevents assessment of demand viability.",
+    criteria4:
+      "No competitive landscape analysis renders differentiation unverifiable.",
+    criteria5:
+      "Missing business model components show no path to sustainability.",
+    criteria6: "Team structure and capabilities completely undefined.",
+    conclusion:
+      "Proposal fails all evaluation dimensions due to incomplete submission. Comprehensive revisions required for meaningful assessment.",
+    think_section: "Full chain-of-thought is available",
   };
 
   const data = evaluationResponse || defaultData;
@@ -121,6 +135,15 @@ export default function EvaluationReport() {
     navigate("/");
   };
 
+  const bulletChainOfThoughtItems = [
+    { label: "Criteria 1", text: data.criteria1 },
+    { label: "Criteria 2", text: data.criteria2 },
+    { label: "Criteria 3", text: data.criteria3 },
+    { label: "Criteria 4", text: data.criteria4 },
+    { label: "Criteria 5", text: data.criteria5 },
+    { label: "Criteria 6", text: data.criteria6 },
+  ];
+
   return (
     <div className="container py-5">
       <Button
@@ -158,7 +181,7 @@ export default function EvaluationReport() {
         {criteria.map((criterion) => (
           <div key={criterion.id} className="col-md-6 mb-4">
             <div className="card p-3 border-dark">
-              <h3 className="">{criterion.title}</h3>
+              <h3>{criterion.title}</h3>
               <div className="mb-2">
                 <div className="d-flex align-items-center gap-2">
                   <span className="h4">Score:</span>
@@ -190,14 +213,28 @@ export default function EvaluationReport() {
         ))}
       </div>
       {data.think_section && (
-        <div className="mb-4 p-3 border-dark rounded thought">
+        <div className="mb-4 p-3 border-dark rounded thought moonshotBlack">
           <h3 className="moonshotBlack">Chain-of-Thought Reasoning</h3>
           <h6 className="mt-3 moonshotBlack">
-            Chain-of-Thought Reasoning will break down your evaluation report
-            step by step, providing clearer insights and empowering better
-            decision-making:
+            Detailed breakdown of your evaluation:
           </h6>
-          <p className="text-muted">{data.think_section}</p>
+          {data.introduction && (
+            <div className="mb-3">
+              <p>{data.introduction}</p>
+            </div>
+          )}
+          <ul>
+            {bulletChainOfThoughtItems.map((item, index) => (
+              <li key={index}>
+                <strong>{item.label}:</strong> {item.text}
+              </li>
+            ))}
+          </ul>
+          {data.conclusion && (
+            <div className="mt-3">
+              <p>{data.conclusion}</p>
+            </div>
+          )}
         </div>
       )}
     </div>
