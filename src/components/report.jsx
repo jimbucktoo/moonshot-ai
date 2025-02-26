@@ -50,6 +50,15 @@ export default function EvaluationReport() {
 
   const data = evaluationResponse || defaultData;
 
+  const overallScore =
+    (data.score_criteria1 +
+      data.score_criteria2 +
+      data.score_criteria3 +
+      data.score_criteria4 +
+      data.score_criteria5 +
+      data.score_criteria6) /
+    6;
+
   const criteria = [
     {
       id: 1,
@@ -161,9 +170,9 @@ export default function EvaluationReport() {
           </span>
           <span
             className="display-4"
-            style={{ color: getGradientColor(data.overall_score) }}
+            style={{ color: getGradientColor(overallScore) }}
           >
-            {data.overall_score}
+            {overallScore.toFixed(1)}
           </span>
         </div>
         <div className="progress" style={{ height: "10px" }}>
@@ -171,7 +180,7 @@ export default function EvaluationReport() {
             className="progress-bar"
             role="progressbar"
             style={{
-              width: `${data.overall_score}%`,
+              width: `${overallScore}%`,
               background: "linear-gradient(to right, #ff0000, #0d6efd)",
             }}
           />
