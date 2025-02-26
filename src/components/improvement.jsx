@@ -4,7 +4,7 @@ import Image3 from "../assets/image3.png";
 import { useSurvey } from "../SurveyContext";
 import "../App.css";
 
-export default function Reasoning() {
+export default function Improvement() {
   const { evaluationResponse } = useSurvey();
 
   const defaultData = {
@@ -14,18 +14,18 @@ export default function Reasoning() {
     score_criteria4: 60,
     score_criteria5: 50,
     score_criteria6: 60,
-    summary_reasoning_criteria1:
-      "Application provides complete English responses to all 20 questions with prototype link. Formatting complies with requirements.",
-    summary_reasoning_criteria2:
-      'Self-declared as "Ideation Stage (Pre-Seed)" with Figma prototype but no active users/testing data. Lacks evidence of prototype validation or user traction.',
-    summary_reasoning_criteria3:
-      "Cited $300B annual startup investments and 20M startups as TAM, but lacks source citations for market size figures. No Google Trends/funding trend analysis shown.",
-    summary_reasoning_criteria4:
-      "Differentiates through AI evaluations but lacks direct competitor analysis. Claims technical advantage without patent/Copyright documentation.",
-    summary_reasoning_criteria5:
-      "Proposed subscription/equity models remain untested. No evidence of paying users or recurring revenue validation.",
-    summary_reasoning_criteria6:
-      "Core technical competencies covered but team lacks scaled startup experience. No prior exits or investor networks demonstrated.",
+    improvement_suggestion_criteria1:
+      'Maintain consistent formatting in external links and clarify "NA" designations for future scalability questions.',
+    improvement_suggestion_criteria2:
+      "Conduct closed beta tests with real startups to gather user feedback and quantify traction metrics before seeking investor adoption.",
+    improvement_suggestion_criteria3:
+      "Add granular market segmentation analysis using platforms like Crunchbase to demonstrate rising demand in AI evaluation tools.",
+    improvement_suggestion_criteria4:
+      "Conduct SWOT analysis against established players like Y Combinator and patent core algorithms to build competitive moats.",
+    improvement_suggestion_criteria5:
+      "Pilot paid tiers with early adopters and publish case studies showing startups' post-funding success rates to prove value proposition.",
+    improvement_suggestion_criteria6:
+      "Recruit growth hackers with SaaS experience and advisors from VC firms to strengthen go-to-market execution capabilities.",
   };
 
   const data = evaluationResponse || defaultData;
@@ -35,37 +35,37 @@ export default function Reasoning() {
       id: 1,
       title: "Application Completeness",
       score: data.score_criteria1,
-      reasoning: data.summary_reasoning_criteria1,
+      improvement: data.improvement_suggestion_criteria1,
     },
     {
       id: 2,
       title: "Product Validation",
       score: data.score_criteria2,
-      reasoning: data.summary_reasoning_criteria2,
+      improvement: data.improvement_suggestion_criteria2,
     },
     {
       id: 3,
       title: "Market Size",
       score: data.score_criteria3,
-      reasoning: data.summary_reasoning_criteria3,
+      improvement: data.improvement_suggestion_criteria3,
     },
     {
       id: 4,
       title: "Competitive Edge",
       score: data.score_criteria4,
-      reasoning: data.summary_reasoning_criteria4,
+      improvement: data.improvement_suggestion_criteria4,
     },
     {
       id: 5,
       title: "Business Model",
       score: data.score_criteria5,
-      reasoning: data.summary_reasoning_criteria5,
+      improvement: data.improvement_suggestion_criteria5,
     },
     {
       id: 6,
       title: "Team Strength",
       score: data.score_criteria6,
-      reasoning: data.summary_reasoning_criteria6,
+      improvement: data.improvement_suggestion_criteria6,
     },
   ];
 
@@ -125,12 +125,12 @@ export default function Reasoning() {
             </div>
           </div>
           <Card className="p-3 mt-3">
-            <h2 className="mb-2 moonshotBlack">Reasoning Analysis</h2>
+            <h2 className="mb-2 moonshotBlack">Improvement Suggestions</h2>
             <h6 className="mt-2 moonshotBlack">
-              Reasoning Analysis provides a detailed breakdown of why MoonshotAI
-              assigned a specific score to each criterion:
+              Improvement Suggestions provide detailed suggestions to further
+              strengthen your startup idea:
             </h6>
-            <p>{criterion.reasoning}</p>
+            <p>{criterion.improvement}</p>
           </Card>
         </Card.Body>
       </Card>

@@ -8,7 +8,7 @@ import BusinessModel from "./components/business-model";
 import PartnershipsSupport from "./components/partnerships-support";
 import Evaluating from "./components/evaluating";
 import Report from "./components/report";
-import Reasoning from "./components/reasoning";
+import Improvement from "./components/improvement";
 import { SurveyProvider } from "./SurveyContext";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Route path="/partnerships-support" element={<PartnershipsSupport />} />
         <Route path="/evaluating" element={<Evaluating />} />
         <Route path="/report" element={<Report />} />
-        <Route path="/reasoning/:id" element={<Reasoning />} />
+        <Route path="/improvement/:id" element={<Improvement />} />
       </Routes>
     </SurveyProvider>
   );
