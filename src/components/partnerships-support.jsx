@@ -98,7 +98,7 @@ export default function PartnershipsSupport() {
                 size="md"
                 style={{ width: "80px" }}
               >
-                Next
+                Submit
               </Button>
             </div>
           </Form>
