@@ -32,7 +32,7 @@ export default function Moonshot() {
             </p>
             <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
               <Link to="/product-overview">
-                <Button variant="primary" size="lg">
+                <Button className="rounded-pill" variant="primary" size="lg">
                   Get Started
                 </Button>
               </Link>
