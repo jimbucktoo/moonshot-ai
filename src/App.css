@@ -4,7 +4,7 @@
 
 .moonshot {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
   min-height: 100vh;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .moonshotWhite {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .moonshotBgBlue {
@@ -33,7 +33,7 @@
 }
 
 .moonshotBgWhite {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 
 .reasoning {
@@ -42,5 +42,5 @@
 }
 
 .thought {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }

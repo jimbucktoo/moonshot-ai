@@ -17,75 +17,93 @@ export default function PartnershipsSupport() {
   };
 
   return (
-    <Container
-      fluid
-      className="bg-dark min-vh-100 d-flex flex-row justify-content-between"
-    >
-      <Col md={3} className="p-3">
+    <Container fluid className="bg-dark">
+      <Row>
         <SurveyProgress currentStep={6} />
-      </Col>
-      <Col md={9} className="p-4 mt-4">
-        <Form
-          onSubmit={handleSubmit}
-          className="mx-auto"
-          style={{ maxWidth: "800px" }}
-        >
-          <Form.Group className="mb-3">
-            <Form.Label>
-              Do you have any strategic partnerships? If so, how do they
-              contribute to your success?
-            </Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Describe your partnerships and their contributions"
-              value={formData.partnerships}
-              onChange={(e) =>
-                setFormData({ ...formData, partnerships: e.target.value })
-              }
-            />
-          </Form.Group>
+        <Col md={8} className="p-4 ms-4">
+          <Form
+            onSubmit={handleSubmit}
+            className="mx-auto"
+            style={{ maxWidth: "800px" }}
+          >
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>
+                Do you have any strategic partnerships? If so, how do they
+                contribute to your success?
+              </Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Describe your partnerships and their contributions"
+                value={formData.partnerships}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    partnerships: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>
-              What support do you need to achieve your goals?
-            </Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Describe the support you need"
-              value={formData.support}
-              onChange={(e) =>
-                setFormData({ ...formData, support: e.target.value })
-              }
-            />
-          </Form.Group>
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>
+                What support do you need to achieve your goals?
+              </Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Describe the support you need"
+                value={formData.support}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    support: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>
-              How much funding do you need, and how will you allocate it?
-            </Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Describe your funding needs and plans for allocation"
-              value={formData.funding}
-              onChange={(e) =>
-                setFormData({ ...formData, funding: e.target.value })
-              }
-            />
-          </Form.Group>
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>
+                How much funding do you need, and how will you allocate it?
+              </Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Describe your funding needs and plans for allocation"
+                value={formData.funding}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    funding: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <div className="d-flex justify-content-between">
-            <Link to="/business-model">
-              <Button variant="primary" size="md">
-                Previous
+            <div className="d-flex justify-content-between">
+              <Link to="/team-organization">
+                <Button
+                  type="submit"
+                  className="float-end rounded-pill"
+                  variant="primary"
+                  size="md"
+                  style={{ width: "100px" }}
+                >
+                  Previous
+                </Button>
+              </Link>
+
+              <Button
+                type="submit"
+                className="float-end rounded-pill"
+                variant="primary"
+                size="md"
+                style={{ width: "80px" }}
+              >
+                Next
               </Button>
-            </Link>
-
-            <Button type="submit" variant="primary" size="md">
-              Submit
-            </Button>
-          </div>
-        </Form>
-      </Col>
+            </div>
+          </Form>
+        </Col>
+      </Row>
     </Container>
   );
 }

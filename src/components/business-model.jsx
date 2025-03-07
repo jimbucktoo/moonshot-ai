@@ -17,73 +17,88 @@ export default function BusinessModel() {
   };
 
   return (
-    <Container
-      fluid
-      className="bg-dark min-vh-100 d-flex flex-row justify-content-between"
-    >
-      <Col md={3} className="p-3">
+    <Container fluid className="bg-dark">
+      <Row>
         <SurveyProgress currentStep={5} />
-      </Col>
-      <Col md={9} className="p-4 mt-4">
-        <Form
-          onSubmit={handleSubmit}
-          className="mx-auto"
-          style={{ maxWidth: "800px" }}
-        >
-          <Form.Group className="mb-3">
-            <Form.Label>What is your revenue model?</Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Describe your revenue model"
-              value={formData.revenueModel}
-              onChange={(e) =>
-                setFormData({ ...formData, revenueModel: e.target.value })
-              }
-            />
-          </Form.Group>
+        <Col md={8} className="p-4 ms-4">
+          <Form
+            onSubmit={handleSubmit}
+            className="mx-auto"
+            style={{ maxWidth: "800px" }}
+          >
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>What is your revenue model?</Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Describe your revenue model"
+                value={formData.revenueModel}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    revenueModel: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>
-              What is your strategy for acquiring and retaining customers?
-            </Form.Label>
-            <Form.Control
-              as="textarea"
-              placeholder="Describe your customer acquisition and retention strategy"
-              value={formData.customerAcquisition}
-              onChange={(e) =>
-                setFormData({
-                  ...formData,
-                  customerAcquisition: e.target.value,
-                })
-              }
-            />
-          </Form.Group>
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>
+                What is your strategy for acquiring and retaining customers?
+              </Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Describe your customer acquisition and retention strategy"
+                value={formData.customerAcquisition}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    customerAcquisition: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>What is the size of your target market?</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Estimate your target market size"
-              value={formData.marketSize}
-              onChange={(e) =>
-                setFormData({ ...formData, marketSize: e.target.value })
-              }
-            />
-          </Form.Group>
+            <Form.Group className="mt-4 mb-4">
+              <Form.Label>What is the size of your target market?</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Estimate your target market size"
+                value={formData.marketSize}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    marketSize: e.target.value,
+                  })
+                }
+              />
+            </Form.Group>
 
-          <div className="d-flex justify-content-between">
-            <Link to="/team-organization">
-              <Button variant="primary" size="md">
-                Previous
+            <div className="d-flex justify-content-between">
+              <Link to="/team-organization">
+                <Button
+                  type="submit"
+                  className="float-end rounded-pill"
+                  variant="primary"
+                  size="md"
+                  style={{ width: "100px" }}
+                >
+                  Previous
+                </Button>
+              </Link>
+
+              <Button
+                type="submit"
+                className="float-end rounded-pill"
+                variant="primary"
+                size="md"
+                style={{ width: "80px" }}
+              >
+                Next
               </Button>
-            </Link>
-
-            <Button type="submit" variant="primary" size="md">
-              Next
-            </Button>
-          </div>
-        </Form>
-      </Col>
+            </div>
+          </Form>
+        </Col>
+      </Row>
     </Container>
   );
 }
