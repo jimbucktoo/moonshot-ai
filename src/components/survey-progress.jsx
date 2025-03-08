@@ -20,7 +20,9 @@ export function SurveyProgress({ currentStep }) {
       <Card.Body className="align-items-center text-center">
         <Card.Title className="text-center fw-bold mb-3 text-primary">
           <h3>
-            <b>Analyze Your Startup Potential</b>
+            <b>Analyze Your</b>
+            <br />
+            <b>Startup Potential</b>
           </h3>
         </Card.Title>
 
@@ -52,8 +54,8 @@ export function SurveyProgress({ currentStep }) {
                 {step.id < currentStep ? "✓" : step.id}
               </div>
               <span
-                className={`fw-semibold ms-3 w-100 text-center ${
-                  step.id <= currentStep ? "text-dark" : "text-muted"
+                className={`fw-bold ms-3 w-100 text-center ${
+                  step.id <= currentStep ? "text-primary" : "text-muted"
                 }`}
               >
                 {step.name}
