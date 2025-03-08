@@ -81,7 +81,7 @@ export default function TeamOrganization() {
                 <Button
                   type="submit"
                   className="float-end rounded-pill"
-                  variant="primary"
+                  variant="secondary"
                   size="md"
                   style={{ width: "100px" }}
                 >

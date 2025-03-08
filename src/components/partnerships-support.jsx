@@ -83,7 +83,7 @@ export default function PartnershipsSupport() {
                 <Button
                   type="submit"
                   className="float-end rounded-pill"
-                  variant="primary"
+                  variant="secondary"
                   size="md"
                   style={{ width: "100px" }}
                 >
