@@ -26,7 +26,7 @@ export default function ProductOverview() {
                 Can you provide a brief summary of your product?
               </Form.Label>
               <Form.Control
-                type="text"
+                as="textarea"
                 placeholder="Enter a brief description of your product"
                 value={formData.summary}
                 onChange={(e) =>
@@ -44,7 +44,7 @@ export default function ProductOverview() {
                 product?
               </Form.Label>
               <Form.Control
-                type="text"
+                as="textarea"
                 placeholder="Describe your target users and current user base"
                 value={formData.users}
                 onChange={(e) =>
@@ -126,8 +126,7 @@ export default function ProductOverview() {
 
             <Form.Group className="mt-4 mb-4">
               <Form.Label>
-                Do you have a prototype or demo? If so, please share the link or
-                file:
+                Do you have a prototype or demo? If so, please share the link:
               </Form.Label>
               <Form.Control
                 type="text"

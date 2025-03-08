@@ -96,7 +96,7 @@ export default function PartnershipsSupport() {
                 className="float-end rounded-pill"
                 variant="primary"
                 size="md"
-                style={{ width: "80px" }}
+                style={{ width: "90px" }}
               >
                 Submit
               </Button>

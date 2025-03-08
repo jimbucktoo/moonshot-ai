@@ -61,7 +61,7 @@ export default function BusinessModel() {
             <Form.Group className="mt-4 mb-4">
               <Form.Label>What is the size of your target market?</Form.Label>
               <Form.Control
-                type="text"
+                as="textarea"
                 placeholder="Estimate your target market size"
                 value={formData.marketSize}
                 onChange={(e) =>
