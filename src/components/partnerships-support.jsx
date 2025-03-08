@@ -79,7 +79,7 @@ export default function PartnershipsSupport() {
             </Form.Group>
 
             <div className="d-flex justify-content-between">
-              <Link to="/team-organization">
+              <Link to="/business-model">
                 <Button
                   type="submit"
                   className="float-end rounded-pill"
