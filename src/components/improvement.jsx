@@ -97,13 +97,13 @@ export default function Improvement() {
       <Button variant="primary" className="mb-3" onClick={() => navigate(-1)}>
         Back to Report
       </Button>
-      <Card className="moonshotBgBlack mt-3 border-0">
+      <Card className="moonshotBgWhite mt-3 border-0">
         <Card.Body>
           <div className="d-flex align-items-center mb-3">
             <Image src={Image3} alt="Moonshot Man" height={240} roundedCircle />
             <div className="ms-2">
-              <h1 className="moonshotWhite">{criterion.title}</h1>
-              <div className="d-flex align-items-center gap-2 moonshotWhite">
+              <h1 className="moonshotBlack">{criterion.title}</h1>
+              <div className="d-flex align-items-center gap-2 moonshotBlack">
                 <span className="h4">Score: </span>
                 <span
                   className="h4"
@@ -124,7 +124,7 @@ export default function Improvement() {
               </div>
             </div>
           </div>
-          <Card className="p-3 mt-3">
+          <Card className="p-3 mt-3 border-dark border-0 shadow">
             <h2 className="mb-2 moonshotBlack">Improvement Suggestions</h2>
             <h6 className="mt-2 moonshotBlack">
               Improvement Suggestions provide detailed suggestions to further

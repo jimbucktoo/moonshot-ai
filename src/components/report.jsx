@@ -161,17 +161,17 @@ export default function Report() {
       >
         Start a New Evaluation
       </Button>
-      <h1 className="mb-4 mt-3 moonshotWhite">Evaluation Report</h1>
+      <h1 className="mb-4 mt-3 moonshotBlack">Evaluation Report</h1>
       <div className="mb-4">
         <div className="d-flex align-items-center gap-3 mb-3">
-          <span className="moonshotWhite">
+          <span className="moonshotBlack">
             <h5>Overall Score:</h5>
           </span>
           <span
             className="display-4"
             style={{ color: getGradientColor(overallScore) }}
           >
-            {overallScore.toFixed(1)}
+            <b>{overallScore.toFixed(1)}</b>
           </span>
         </div>
         <div className="progress" style={{ height: "10px" }}>
@@ -188,7 +188,7 @@ export default function Report() {
       <div className="row">
         {criteria.map((criterion) => (
           <div key={criterion.id} className="col-md-6 mb-4">
-            <div className="card p-3 border-dark">
+            <div className="card p-3 border-dark border-0 shadow">
               <h3>{criterion.title}</h3>
               <div className="mb-2">
                 <div className="d-flex align-items-center gap-2">
