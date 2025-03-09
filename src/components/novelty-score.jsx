@@ -17,6 +17,19 @@ export default function NoveltyScore() {
       .then((text) => setMarkdownContent(text));
   }, []);
 
+  const getGradientColor = (score) => {
+    const red = { r: 255, g: 0, b: 0 };
+    const blue = { r: 13, g: 110, b: 253 };
+
+    const ratio = 1 - score / 100;
+
+    const r = Math.round(blue.r * (1 - ratio) + red.r * ratio);
+    const g = Math.round(blue.g * (1 - ratio) + red.g * ratio);
+    const b = Math.round(blue.b * (1 - ratio) + red.b * ratio);
+
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+
   return (
     <Container className="py-4">
       <Button variant="primary" className="mb-3" onClick={() => navigate(-2)}>
@@ -30,7 +43,9 @@ export default function NoveltyScore() {
               <h1 className="moonshotBlack">Novelty Score</h1>
               <div className="d-flex align-items-center gap-2 moonshotBlack">
                 <span className="h4">Score: </span>
-                <span className="h4">85</span>
+                <span className="h4" style={{ color: getGradientColor(85) }}>
+                  85
+                </span>
               </div>
               <div className="progress" style={{ height: "10px" }}>
                 <div

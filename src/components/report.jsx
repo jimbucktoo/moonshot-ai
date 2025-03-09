@@ -166,7 +166,7 @@ export default function Report() {
         Start a New Evaluation
       </Button>
       <Button
-        variant="success"
+        variant="secondary"
         className="mb-3 ms-3"
         onClick={handleGenerateNoveltyScore}
       >
