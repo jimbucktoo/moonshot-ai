@@ -7,8 +7,10 @@ import TeamOrganization from "./components/team-organization";
 import BusinessModel from "./components/business-model";
 import PartnershipsSupport from "./components/partnerships-support";
 import Evaluating from "./components/evaluating";
+import Generating from "./components/generating";
 import Report from "./components/report";
 import Improvement from "./components/improvement";
+import NoveltyScore from "./components/novelty-score";
 import { SurveyProvider } from "./SurveyContext";
 
 function App() {
@@ -26,8 +28,10 @@ function App() {
         <Route path="/business-model" element={<BusinessModel />} />
         <Route path="/partnerships-support" element={<PartnershipsSupport />} />
         <Route path="/evaluating" element={<Evaluating />} />
+        <Route path="/generating" element={<Generating />} />
         <Route path="/report" element={<Report />} />
         <Route path="/improvement/:id" element={<Improvement />} />
+        <Route path="/novelty-score" element={<NoveltyScore />} />
       </Routes>
     </SurveyProvider>
   );

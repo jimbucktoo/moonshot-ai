@@ -143,6 +143,10 @@ export default function Report() {
     navigate("/");
   };
 
+  const handleGenerateNoveltyScore = () => {
+    navigate("/generating");
+  };
+
   const bulletChainOfThoughtItems = [
     { label: "Application Completeness", text: data.criteria1 },
     { label: "Product Validation", text: data.criteria2 },
@@ -160,6 +164,13 @@ export default function Report() {
         onClick={handleResetAndNavigate}
       >
         Start a New Evaluation
+      </Button>
+      <Button
+        variant="success"
+        className="mb-3 ms-3"
+        onClick={handleGenerateNoveltyScore}
+      >
+        Generate Novelty Score
       </Button>
       <h1 className="mb-4 mt-3 moonshotBlack">Evaluation Report</h1>
       <div className="mb-4">
