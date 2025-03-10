@@ -10,6 +10,7 @@ import Evaluating from "./components/evaluating";
 import Generating from "./components/generating";
 import Report from "./components/report";
 import Improvement from "./components/improvement";
+import DetailedReasoning from "./components/detailed-reasoning";
 import NoveltyScore from "./components/novelty-score";
 import { SurveyProvider } from "./SurveyContext";
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/generating" element={<Generating />} />
         <Route path="/report" element={<Report />} />
         <Route path="/improvement/:id" element={<Improvement />} />
+        <Route path="/detailed-reasoning/:id" element={<DetailedReasoning />} />
         <Route path="/novelty-score" element={<NoveltyScore />} />
       </Routes>
     </SurveyProvider>

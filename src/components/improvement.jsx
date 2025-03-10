@@ -8,24 +8,24 @@ export default function Improvement() {
   const { evaluationResponse } = useSurvey();
 
   const defaultData = {
-    score_criteria1: 90,
+    score_criteria1: 70,
     score_criteria2: 30,
-    score_criteria3: 70,
-    score_criteria4: 60,
+    score_criteria3: 60,
+    score_criteria4: 40,
     score_criteria5: 50,
-    score_criteria6: 60,
+    score_criteria6: 50,
     improvement_suggestion_criteria1:
-      'Maintain consistent formatting in external links and clarify "NA" designations for future scalability questions.',
+      "Strengthen answers with quantifiable data: Add metrics for the founder’s prior product (e.g., 'led a product reaching 15k MAUs'). Provide screenshots or video demos of the Figma prototype to demonstrate functionality. Outline partnership negotiation timelines (e.g., 'targeting 3 accelerator partnerships by Q3 2024'). Include third-party validation, such as beta-test agreements with incubators. Use bullet points to clarify team roles beyond titles (e.g., 'ML Engineer reduced model latency by 40% in prior role').",
     improvement_suggestion_criteria2:
-      "Conduct closed beta tests with real startups to gather user feedback and quantify traction metrics before seeking investor adoption.",
+      "Launch a closed beta with 50+ startups within 3 months, publishing anonymized feedback and success metrics (e.g., '70% of users implemented recommendations'). Partner with one accelerator for a pilot program, tracking metrics like investor matchmaking efficiency. Compare AI evaluations against human experts in a blinded study to validate accuracy. Add a 'Testimonials' section with quotes from beta users.",
     improvement_suggestion_criteria3:
-      "Add granular market segmentation analysis using platforms like Crunchbase to demonstrate rising demand in AI evaluation tools.",
+      "Calculate SAM/SOM: Define target segments (e.g., pre-seed tech startups in North America and Europe) totaling 500k addressable startups. Model revenue at 5% penetration with a $200/month subscription. Cite Crunchbase data showing 22% YoY growth in AI startup investments. Add a SWOT analysis of market risks (e.g., investor skepticism toward AI evaluators).",
     improvement_suggestion_criteria4:
-      "Conduct SWOT analysis against established players like Y Combinator and patent core algorithms to build competitive moats.",
+      "File a provisional patent for the evaluation algorithm. Publish a benchmark study showing 30% higher prediction accuracy vs human mentors. Integrate unique data sources (e.g., scraping Crunchbase for real-time funding trends). Partner with a major VC firm to co-develop investor-specific features, creating exclusivity.",
     improvement_suggestion_criteria5:
-      "Pilot paid tiers with early adopters and publish case studies showing startups' post-funding success rates to prove value proposition.",
+      "Test pricing with 50 startups via surveys, offering tiered plans (e.g., $49–$499/month). Pilot the equity model with 10 startups, tracking platform retention post-funding. Add a 'Revenue Simulation' section showing break-even at 2,000 subscribers. Explore API monetization for accelerators.",
     improvement_suggestion_criteria6:
-      "Recruit growth hackers with SaaS experience and advisors from VC firms to strengthen go-to-market execution capabilities.",
+      "Hire a Head of Growth with SaaS scaling experience or onboard an advisor from Techstars/500 Startups. Detail the founder’s prior user acquisition strategy (e.g., 'Grew MVP to 5k users via LinkedIn ads'). Add a biz-dev co-founder with VC connections. Publish team bios with LinkedIn profiles for credibility.",
   };
 
   const data = evaluationResponse || defaultData;

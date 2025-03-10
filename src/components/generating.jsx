@@ -13,7 +13,7 @@ export default function Generating() {
     const timer = setTimeout(() => {
       setLoading(false);
       navigate("/novelty-score");
-    }, 30000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [navigate]);

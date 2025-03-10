@@ -11,40 +11,42 @@ export default function Report() {
   const navigate = useNavigate();
 
   const defaultData = {
-    score_criteria1: 90,
-    score_criteria2: 40,
+    score_criteria1: 70,
+    score_criteria2: 30,
     score_criteria3: 60,
-    score_criteria4: 50,
+    score_criteria4: 40,
     score_criteria5: 50,
-    score_criteria6: 60,
+    score_criteria6: 50,
     summary_reasoning_criteria1:
-      "Application is fully in English with complete responses to all 20 questions, including prototype links and detailed strategic plans.",
+      "The application meets basic completeness requirements with English responses and a prototype, but lacks depth in critical areas like partnership development and technical validation. It sufficiently addresses all questions but requires more concrete evidence and specificity to achieve full marks.",
     summary_reasoning_criteria2:
-      "While claiming Ideation Stage with a Figma prototype, there's no evidence of user testing, active users, or operational validation beyond conceptual demonstrations.",
+      "Despite having a prototype, the absence of user feedback, pilot programs, or measurable engagement places MoonshotAI firmly in the concept phase. Validation remains theoretical rather than empirical, failing to meet the threshold for Early Traction.",
     summary_reasoning_criteria3:
-      "Top-down TAM/SAM figures appear sufficient but lack bottom-up validation through competitor benchmarks or cited market research reports.",
+      "The market size assertion is directionally correct but lacks analytical rigor. Without segmentation, pricing tiers, or competitor benchmarking, the actual serviceable market remains unproven.",
     summary_reasoning_criteria4:
-      "Differentiates through AI matchmaking but fails to identify direct competitors (e.g., human-driven accelerators) or prove technological defensibility against clones.",
+      "The platform’s AI focus provides differentiation, but without defensible IP or proven superiority over human-driven accelerators, the competitive moat is weak. Market entry barriers for clones remain low.",
     summary_reasoning_criteria5:
-      "Multiple revenue streams proposed but untested; freemium conversion rates and investor willingness to share equity remain unvalidated.",
+      "While the revenue model is conceptually sound, the absence of pricing validation and unclear unit economics (e.g., CAC vs LTV) makes sustainability uncertain.",
     summary_reasoning_criteria6:
-      "Core technical competencies covered but team lacks dedicated sales/marketing roles and prior scaling experience in AI platforms.",
+      "The team is minimally viable for product development but lacks proven scaling experience and complementary business skills. Investor confidence would require adding roles with go-to-market expertise.",
     introduction:
-      "The evaluation rigorously assesses MoonshotAI's viability across six investor-critical dimensions, balancing demonstrated capabilities against unproven assumptions in its AI-driven accelerator model.",
+      "MoonshotAI presents a conceptually strong AI-driven accelerator platform but requires significant validation and strategic pivots to meet investor expectations. While the technical foundation exists, gaps in market proof, team composition, and competitive defensibility necessitate targeted improvements.",
     criteria1:
-      "Full compliance with language requirements and question depth satisfies baseline screening thresholds. The Figma prototype link and multi-phase roadmap demonstrate adequate documentation.",
+      "Structural completeness achieved, but lacks operational specifics and third-party validation.",
     criteria2:
-      "Prototype-only status without user metrics fails key validation benchmarks for Early Stage classification. Reliance on future beta testing undermines current traction claims.",
+      "Ideation-stage status with unvalidated prototype fails to demonstrate market readiness.",
     criteria3:
-      "While citing large TAM, absence of competitor revenue comparisons and trend analysis (e.g., Crunchbase funding in AI tools) leaves market viability partially unsubstantiated.",
+      "Large TAM cited without realistic SOM analysis or pricing validation.",
     criteria4:
-      "Differentiation through AI personalization shows potential but lacks empirical validation against human-driven alternatives. No IP disclosures weaken defensibility arguments.",
+      "Differentiation exists but lacks IP protection and performance benchmarks against competitors.",
     criteria5:
-      "Revenue model creativity offset by untested pricing elasticity and equity stake mechanics. Churn risks in freemium startups post-funding require mitigation strategies.",
+      "Revenue model plausible but unproven; unit economics undefined.",
     criteria6:
-      "Technical founding strength contrasts with missing business development expertise. While ML capabilities are proven, investor network access remains a critical gap.",
+      "Technically competent team missing critical growth and sales roles.",
     conclusion:
-      "MoonshotAI demonstrates strong technical foundations but requires urgent validation of market assumptions and traction metrics to justify investor confidence.",
+      "MoonshotAI requires 6–12 months of focused user validation, team expansion, and IP development to become fundable. Current scoring reflects high potential offset by execution risks.",
+    think_section:
+      "Okay, let's start evaluating this startup proposal for MoonshotAI based on the given criteria. \n\nFirst, Criteria 1: Completeness and Intelligibility. The application is in English, so that's good. They answered all 20 questions, but some answers are brief. For example, the team experience mentions prior startup experience and skills but lacks specific details. The prototype link is provided, which is a plus. However, some sections like strategic partnerships are marked as 'currently no formal partnerships,' which is okay but might need more context. Overall, it's complete but could use more depth in certain areas.\n\nCriteria 2: Validation/Testing. The product is in the Ideation Stage (Pre-Seed), with a prototype and a Figma demo. They mention a PoC using DeepSeek but no user testing yet. No active users currently. Since they're still in the prototype phase without real user feedback, they haven't moved beyond the concept stage. This might be a red flag for investors looking for validated ideas.\n\nCriteria 3: Market Size. They cite 20 million startups and $300 billion annual investments. TAM seems large, but they don't break down SAM or SOM. Without specific segmentation, it's hard to assess the obtainable market. They need more detailed analysis using both top-down and bottom-up approaches to validate these numbers.\n\nCriteria 4: Competitive Edge. They mention AI-driven evaluations and matchmaking as differentiators. However, competitors like Y Combinator or existing AI tools might offer similar services. The SWOT analysis isn't provided, and there's no clear moat mentioned. They need to articulate what makes their AI superior and how they'll sustain that advantage.\n\nCriteria 5: Business Model. They have a subscription model, equity stakes, and premium services. However, without evidence of user willingness to pay or existing revenue, it's theoretical. The freemium model could attract users, but conversion to paid needs validation. They should test pricing and gather feedback on revenue streams.\n\nCriteria 6: Team. The team has relevant skills in AI, product management, and development. However, the founder's experience is limited (1 year in startups), and there's no mention of prior successful exits or scaling. The team lacks marketing/business development roles, which is crucial for customer acquisition and partnerships. They need to expand the team or secure advisors to fill these gaps.\n\nEach criterion needs a score based on the rubric. For example, Criteria 2 is in the Ideation Stage without user validation, so a lower score. The team (Criteria 6) has technical skills but lacks business experience, so a moderate score. The market size (Criteria 3) is large but not well-supported, leading to a mid-range score. \n\nImprovement suggestions should address each criterion's weaknesses. For instance, conducting user testing for validation, detailed market analysis, competitive SWOT, revenue model testing, and team expansion.",
   };
 
   const data = evaluationResponse || defaultData;
@@ -224,16 +226,21 @@ export default function Report() {
               </div>
               <h6 className="mt-2">Reasoning Analysis:</h6>
               <p className="text-muted">{criterion.reasoning}</p>
-              <Link to={`/improvement/${criterion.id}`}>
-                <Button variant="primary">Improvement Suggestions</Button>
-              </Link>
+              <div className="d-flex justify-content-start gap-3">
+                <Link to={`/detailed-reasoning/${criterion.id}`}>
+                  <Button variant="primary">Detailed Reasoning</Button>
+                </Link>
+                <Link to={`/improvement/${criterion.id}`}>
+                  <Button variant="primary">Improvement Suggestions</Button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
       </div>
       {data.introduction && (
         <div className="mb-4 p-3 border-dark rounded thought moonshotBlack">
-          <h3 className="moonshotBlack">Chain-of-Thought Reasoning</h3>
+          <h3 className="moonshotBlack">Chain-of-Thought Outline</h3>
           <h6 className="mt-3 moonshotBlack">
             Detailed breakdown of your evaluation:
           </h6>
@@ -254,6 +261,8 @@ export default function Report() {
               <p>{data.conclusion}</p>
             </div>
           )}
+          <h3 className="moonshotBlack">Chain-of-Thought Reasoning</h3>
+          <p>{data.think_section}</p>
         </div>
       )}
     </div>
