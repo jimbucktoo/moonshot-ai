@@ -3,9 +3,12 @@
 }
 
 .moonshot {
-  background-color: #ffffff;
   color: #000000;
+  background: radial-gradient(circle at right, #0d6efd, #ffffff 35%),
+    linear-gradient(to right, #000000, #ffffff);
   min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .moonshotBlue {

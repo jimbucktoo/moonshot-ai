@@ -16,20 +16,18 @@ export default function Moonshot() {
               <span className="highlight">Startup Success</span>
             </h1>
             <br />
-            <h1>🚀 🌖</h1>
-            <br />
             <div className="my-1">
-              <h2>Transform Your Startup Idea into Reality</h2>
+              <h3>Transform Your Startup Idea into Reality</h3>
               <br />
               <h3>Actionable Insights.</h3>
               <h3>Smarter Decisions.</h3>
               <h3>Greater Success.</h3>
             </div>
             <br />
-            <p className="lead">
-              Unlock your startup’s true potential with AI-powered evaluations
-              for smarter, data-driven decisions.
-            </p>
+            <h5>
+              Unlock your startup’s potential with AI-powered evaluations for
+              smarter, data-driven decisions.
+            </h5>
             <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
               <Link to="/product-overview">
                 <Button className="rounded-pill" variant="primary" size="lg">
@@ -40,7 +38,7 @@ export default function Moonshot() {
           </Col>
           <Col md={4} className="d-none d-md-block text-center">
             <img
-              className="moonshotImage"
+              className="moonshotImage ms-5"
               src={Image1}
               alt="Moonshot Man"
               height={480}
