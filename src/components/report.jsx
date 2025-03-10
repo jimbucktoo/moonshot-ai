@@ -224,7 +224,7 @@ export default function Report() {
                   />
                 </div>
               </div>
-              <h6 className="mt-2">Reasoning Analysis:</h6>
+              <h6 className="mt-2">Reasoning Summary:</h6>
               <p className="text-muted">{criterion.reasoning}</p>
               <div className="d-flex justify-content-start gap-3">
                 <Link to={`/detailed-reasoning/${criterion.id}`}>
