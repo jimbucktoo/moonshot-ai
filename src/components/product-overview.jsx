@@ -20,7 +20,11 @@ export default function ProductOverview() {
       <Row>
         <SurveyProgress currentStep={1} />
         <Col md={8} className="p-4 ms-4">
-          <Form onSubmit={handleSubmit}>
+          <Form
+            onSubmit={handleSubmit}
+            className="mx-auto"
+            style={{ maxWidth: "800px" }}
+          >
             <Form.Group className="mt-4 mb-4">
               <Form.Label>
                 Can you provide a brief summary of your product?
