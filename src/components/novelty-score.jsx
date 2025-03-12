@@ -44,7 +44,7 @@ export default function NoveltyScore() {
               <div className="d-flex align-items-center gap-2 moonshotBlack">
                 <span className="h4">Score: </span>
                 <span className="h4" style={{ color: getGradientColor(85) }}>
-                  85
+                  83
                 </span>
               </div>
               <div className="progress" style={{ height: "10px" }}>
@@ -52,7 +52,7 @@ export default function NoveltyScore() {
                   className="progress-bar"
                   role="progressbar"
                   style={{
-                    width: `85%`,
+                    width: `83%`,
                     background: "linear-gradient(to right, #ff0000, #0d6efd)",
                   }}
                 />
