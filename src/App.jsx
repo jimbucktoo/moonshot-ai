@@ -9,8 +9,7 @@ import PartnershipsSupport from "./components/partnerships-support";
 import Evaluating from "./components/evaluating";
 import Generating from "./components/generating";
 import Report from "./components/report";
-import Improvement from "./components/improvement";
-import DetailedReasoning from "./components/detailed-reasoning";
+import Details from "./components/details";
 import NoveltyScore from "./components/novelty-score";
 import { SurveyProvider } from "./SurveyContext";
 
@@ -31,8 +30,7 @@ function App() {
         <Route path="/evaluating" element={<Evaluating />} />
         <Route path="/generating" element={<Generating />} />
         <Route path="/report" element={<Report />} />
-        <Route path="/improvement/:id" element={<Improvement />} />
-        <Route path="/detailed-reasoning/:id" element={<DetailedReasoning />} />
+        <Route path="/details/:id" element={<Details />} />
         <Route path="/novelty-score" element={<NoveltyScore />} />
       </Routes>
     </SurveyProvider>

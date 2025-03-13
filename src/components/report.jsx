@@ -227,11 +227,8 @@ export default function Report() {
               <h6 className="mt-2">Reasoning Summary:</h6>
               <p className="text-muted">{criterion.reasoning}</p>
               <div className="d-flex justify-content-start gap-3">
-                <Link to={`/detailed-reasoning/${criterion.id}`}>
-                  <Button variant="primary">Detailed Reasoning</Button>
-                </Link>
-                <Link to={`/improvement/${criterion.id}`}>
-                  <Button variant="primary">Improvement Suggestions</Button>
+                <Link to={`/details/${criterion.id}`}>
+                  <Button variant="primary">View Details</Button>
                 </Link>
               </div>
             </div>
