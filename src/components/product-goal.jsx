@@ -18,7 +18,7 @@ export default function ProductGoal() {
   };
 
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-light">
       <Row>
         <SurveyProgress currentStep={2} />
         <Col md={8} className="p-4 ms-4">
@@ -89,7 +89,7 @@ export default function ProductGoal() {
 
               <Button
                 type="submit"
-                className="float-end rounded-pill"
+                className="float-end rounded-pill moonshotButtonTeal"
                 variant="primary"
                 size="md"
                 style={{ width: "80px" }}

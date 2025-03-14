@@ -17,7 +17,7 @@ export default function BusinessModel() {
   };
 
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-light">
       <Row>
         <SurveyProgress currentStep={5} />
         <Col md={8} className="p-4 ms-4">
@@ -88,7 +88,7 @@ export default function BusinessModel() {
 
               <Button
                 type="submit"
-                className="float-end rounded-pill"
+                className="float-end rounded-pill moonshotButtonTeal"
                 variant="primary"
                 size="md"
                 style={{ width: "80px" }}

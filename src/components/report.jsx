@@ -105,13 +105,13 @@ export default function Report() {
 
   const getGradientColor = (score) => {
     const red = { r: 255, g: 0, b: 0 };
-    const blue = { r: 13, g: 110, b: 253 };
+    const teal = { r: 23, g: 183, b: 186 };
 
     const ratio = 1 - score / 100;
 
-    const r = Math.round(blue.r * (1 - ratio) + red.r * ratio);
-    const g = Math.round(blue.g * (1 - ratio) + red.g * ratio);
-    const b = Math.round(blue.b * (1 - ratio) + red.b * ratio);
+    const r = Math.round(teal.r * (1 - ratio) + red.r * ratio);
+    const g = Math.round(teal.g * (1 - ratio) + red.g * ratio);
+    const b = Math.round(teal.b * (1 - ratio) + red.b * ratio);
 
     return `rgb(${r}, ${g}, ${b})`;
   };
@@ -162,7 +162,7 @@ export default function Report() {
     <div className="container py-5">
       <Button
         variant="primary"
-        className="mb-3"
+        className="mb-3 moonshotButtonTeal"
         onClick={handleResetAndNavigate}
       >
         Start a New Evaluation
@@ -193,7 +193,7 @@ export default function Report() {
             role="progressbar"
             style={{
               width: `${overallScore}%`,
-              background: "linear-gradient(to right, #ff0000, #0d6efd)",
+              background: "linear-gradient(to right, #ff0000, #17b7ba)",
             }}
           />
         </div>
@@ -219,7 +219,7 @@ export default function Report() {
                     role="progressbar"
                     style={{
                       width: `${criterion.score}%`,
-                      background: "linear-gradient(to right, #ff0000, #0d6efd)",
+                      background: "linear-gradient(to right, #ff0000, #17b7ba)",
                     }}
                   />
                 </div>
@@ -228,7 +228,9 @@ export default function Report() {
               <p className="text-muted">{criterion.reasoning}</p>
               <div className="d-flex justify-content-start gap-3">
                 <Link to={`/details/${criterion.id}`}>
-                  <Button variant="primary">View Details</Button>
+                  <Button variant="primary" className="moonshotButtonTeal">
+                    View Details
+                  </Button>
                 </Link>
               </div>
             </div>

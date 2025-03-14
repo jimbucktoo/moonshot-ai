@@ -99,37 +99,37 @@ export default function Evaluating() {
     <div className="bg-dark d-flex min-vh-100 align-items-center justify-content-center">
       <Card className="p-4 text-center shadow" style={{ maxWidth: "500px" }}>
         <Card.Body className="d-flex flex-column align-items-center text-center">
-          <h1 className="moonshotBlue mb-4">
+          <h1 className="moonshotTeal mb-4">
             Generating Your Evaluation Report
           </h1>
           {loading && (
             <div>
               <Spinner
-                className="mx-2 mb-4"
+                className="mx-2 mb-4 moonshotBgTeal"
                 animation="grow"
                 variant="primary"
                 role="status"
               />
               <Spinner
-                className="mx-2 mb-4"
+                className="mx-2 mb-4 moonshotBgTeal"
                 animation="grow"
                 variant="primary"
                 role="status"
               />
               <Spinner
-                className="mx-2 mb-4"
+                className="mx-2 mb-4 moonshotBgTeal"
                 animation="grow"
                 variant="primary"
                 role="status"
               />
               <Spinner
-                className="mx-2 mb-4"
+                className="mx-2 mb-4 moonshotBgTeal"
                 animation="grow"
                 variant="primary"
                 role="status"
               />
               <Spinner
-                className="mx-2 mb-4"
+                className="mx-2 mb-4 moonshotBgTeal"
                 animation="grow"
                 variant="primary"
                 role="status"

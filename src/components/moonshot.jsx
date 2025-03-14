@@ -1,7 +1,7 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Image1 from "../assets/image1.png";
-import Logo from "../assets/MoonshotAILogoWhite.png";
+import Logo from "../assets/MoonshotAILogoTeal.png";
 import "../App.css";
 
 export default function Moonshot() {
@@ -30,7 +30,11 @@ export default function Moonshot() {
             </h5>
             <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
               <Link to="/product-overview">
-                <Button className="rounded-pill" variant="primary" size="lg">
+                <Button
+                  className="rounded-pill moonshotButtonTeal"
+                  variant="primary"
+                  size="lg"
+                >
                   Get Started
                 </Button>
               </Link>

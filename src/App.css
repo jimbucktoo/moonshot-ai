@@ -1,10 +1,10 @@
 .highlight {
-  color: #0d6efd;
+  color: #17b7ba;
 }
 
 .moonshot {
   color: #000000;
-  background: radial-gradient(circle at right, #0d6efd, #ffffff 35%),
+  background: radial-gradient(circle at right, #17b7ba, #ffffff 35%),
     linear-gradient(to right, #000000, #ffffff);
   min-height: 100vh;
   padding: 20px;
@@ -39,6 +39,20 @@
   background-color: #ffffff !important;
 }
 
+.moonshotTeal {
+  color: #17b7ba !important;
+}
+
+.moonshotBgTeal {
+  background-color: #17b7ba !important;
+}
+
+.moonshotButtonTeal {
+  color: #ffffff !important;
+  background-color: #17b7ba !important;
+  border: none !important;
+}
+
 .reasoning {
   background-color: #000000;
   min-height: 100vh;
@@ -46,4 +60,8 @@
 
 .thought {
   background-color: #ffffff;
+}
+
+.surveyProgressBg {
+  background-color: #e0ecec !important;
 }

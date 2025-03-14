@@ -17,7 +17,7 @@ export default function InnovationFeasibility() {
   };
 
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-light">
       <Row>
         <SurveyProgress currentStep={3} />
         <Col md={8} className="p-4 ms-4">
@@ -92,7 +92,7 @@ export default function InnovationFeasibility() {
 
               <Button
                 type="submit"
-                className="float-end rounded-pill"
+                className="float-end rounded-pill moonshotButtonTeal"
                 variant="primary"
                 size="md"
                 style={{ width: "80px" }}

@@ -19,20 +19,24 @@ export default function NoveltyScore() {
 
   const getGradientColor = (score) => {
     const red = { r: 255, g: 0, b: 0 };
-    const blue = { r: 13, g: 110, b: 253 };
+    const teal = { r: 23, g: 183, b: 186 };
 
     const ratio = 1 - score / 100;
 
-    const r = Math.round(blue.r * (1 - ratio) + red.r * ratio);
-    const g = Math.round(blue.g * (1 - ratio) + red.g * ratio);
-    const b = Math.round(blue.b * (1 - ratio) + red.b * ratio);
+    const r = Math.round(teal.r * (1 - ratio) + red.r * ratio);
+    const g = Math.round(teal.g * (1 - ratio) + red.g * ratio);
+    const b = Math.round(teal.b * (1 - ratio) + red.b * ratio);
 
     return `rgb(${r}, ${g}, ${b})`;
   };
 
   return (
     <Container className="py-4">
-      <Button variant="primary" className="mb-3" onClick={() => navigate(-2)}>
+      <Button
+        variant="primary"
+        className="mb-3 moonshotButtonTeal"
+        onClick={() => navigate(-2)}
+      >
         Back to Report
       </Button>
       <Card className="moonshotBgWhite mt-3 border-0">
@@ -53,7 +57,7 @@ export default function NoveltyScore() {
                   role="progressbar"
                   style={{
                     width: `83%`,
-                    background: "linear-gradient(to right, #ff0000, #0d6efd)",
+                    background: "linear-gradient(to right, #ff0000, #17b7ba)",
                   }}
                 />
               </div>

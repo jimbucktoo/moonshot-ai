@@ -17,7 +17,7 @@ export default function TeamOrganization() {
   };
 
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-light">
       <Row>
         <SurveyProgress currentStep={4} />
         <Col md={8} className="p-4 ms-4">
@@ -91,7 +91,7 @@ export default function TeamOrganization() {
 
               <Button
                 type="submit"
-                className="float-end rounded-pill"
+                className="float-end rounded-pill moonshotButtonTeal"
                 variant="primary"
                 size="md"
                 style={{ width: "80px" }}
