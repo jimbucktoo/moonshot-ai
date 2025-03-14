@@ -161,15 +161,15 @@ export default function Report() {
   return (
     <div className="container py-5">
       <Button
-        variant="primary"
-        className="mb-3 moonshotButtonTeal"
+        variant="secondary"
+        className="mb-3"
         onClick={handleResetAndNavigate}
       >
         Start a New Evaluation
       </Button>
       <Button
-        variant="secondary"
-        className="mb-3 ms-3"
+        variant="primary"
+        className="mb-3 ms-3 moonshotButtonTeal"
         onClick={handleGenerateNoveltyScore}
       >
         Generate Novelty Score
