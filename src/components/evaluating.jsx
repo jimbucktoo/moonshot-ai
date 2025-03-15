@@ -85,15 +85,18 @@ export default function Evaluating() {
     console.log("Updated proposal:", proposal);
     if (proposal && !evaluationSent) {
       setEvaluationSent(true);
-      handleEvaluate();
+      //handleEvaluate();
     }
   }, [proposal]);
 
   useEffect(() => {
-    if (response) {
+    const timer = setTimeout(() => {
+      setLoading(false);
       navigate("/report");
-    }
-  }, [response]);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <div className="moonshotBgTeal d-flex min-vh-100 align-items-center justify-content-center">
@@ -102,40 +105,38 @@ export default function Evaluating() {
           <h1 className="moonshotTeal mb-4">
             Generating Your Evaluation Report
           </h1>
-          {loading && (
-            <div>
-              <Spinner
-                className="mx-2 mb-4 moonshotBgTeal"
-                animation="grow"
-                variant="primary"
-                role="status"
-              />
-              <Spinner
-                className="mx-2 mb-4 moonshotBgTeal"
-                animation="grow"
-                variant="primary"
-                role="status"
-              />
-              <Spinner
-                className="mx-2 mb-4 moonshotBgTeal"
-                animation="grow"
-                variant="primary"
-                role="status"
-              />
-              <Spinner
-                className="mx-2 mb-4 moonshotBgTeal"
-                animation="grow"
-                variant="primary"
-                role="status"
-              />
-              <Spinner
-                className="mx-2 mb-4 moonshotBgTeal"
-                animation="grow"
-                variant="primary"
-                role="status"
-              />
-            </div>
-          )}
+          <div>
+            <Spinner
+              className="mx-2 mb-4 moonshotBgTeal"
+              animation="grow"
+              variant="primary"
+              role="status"
+            />
+            <Spinner
+              className="mx-2 mb-4 moonshotBgTeal"
+              animation="grow"
+              variant="primary"
+              role="status"
+            />
+            <Spinner
+              className="mx-2 mb-4 moonshotBgTeal"
+              animation="grow"
+              variant="primary"
+              role="status"
+            />
+            <Spinner
+              className="mx-2 mb-4 moonshotBgTeal"
+              animation="grow"
+              variant="primary"
+              role="status"
+            />
+            <Spinner
+              className="mx-2 mb-4 moonshotBgTeal"
+              animation="grow"
+              variant="primary"
+              role="status"
+            />
+          </div>
           {error && <p className="text-danger">{error}</p>}
           <p className="text-secondary mb-4">
             Analyzing your idea with advanced AI algorithms.
