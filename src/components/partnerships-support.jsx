@@ -81,8 +81,8 @@ export default function PartnershipsSupport() {
             <div className="d-flex justify-content-between">
               <Link to="/business-model">
                 <Button
-                  type="submit"
-                  className="float-end rounded-pill"
+                  type="button"
+                  className="rounded-pill"
                   variant="secondary"
                   size="md"
                   style={{ width: "100px" }}
@@ -91,15 +91,27 @@ export default function PartnershipsSupport() {
                 </Button>
               </Link>
 
-              <Button
-                type="submit"
-                className="float-end rounded-pill moonshotButtonTeal"
-                variant="primary"
-                size="md"
-                style={{ width: "90px" }}
-              >
-                Submit
-              </Button>
+              <div className="d-flex">
+                <Button
+                  type="button"
+                  onClick={() => navigate("/report")}
+                  className="rounded-pill me-2"
+                  variant="secondary"
+                  size="md"
+                  style={{ width: "90px" }}
+                >
+                  Sample
+                </Button>
+                <Button
+                  type="submit"
+                  className="rounded-pill moonshotButtonTeal"
+                  variant="primary"
+                  size="md"
+                  style={{ width: "90px" }}
+                >
+                  Submit
+                </Button>
+              </div>
             </div>
           </Form>
         </Col>

@@ -8,12 +8,12 @@ export default function Details() {
   const { evaluationResponse } = useSurvey();
 
   const defaultData = {
-    score_criteria1: 70,
-    score_criteria2: 30,
-    score_criteria3: 60,
-    score_criteria4: 40,
-    score_criteria5: 50,
-    score_criteria6: 50,
+    score_criteria1: 80,
+    score_criteria2: 50,
+    score_criteria3: 70,
+    score_criteria4: 60,
+    score_criteria5: 60,
+    score_criteria6: 70,
     detailed_reasoning_criteria1:
       "The application is entirely in English and addresses all 20 questions, though some answers lack depth (e.g., team experience is summarized without specific achievements). The Figma prototype link demonstrates tangible progress, and the roadmap includes measurable milestones. However, answers like 'currently no formal partnerships' lack actionable plans, and claims about AI accuracy remain unproven. While intelligible and structurally complete, the lack of granularity in technical validation and partnership strategies prevents a higher score.",
     detailed_reasoning_criteria2:

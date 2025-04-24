@@ -11,12 +11,12 @@ export default function Report() {
   const navigate = useNavigate();
 
   const defaultData = {
-    score_criteria1: 70,
-    score_criteria2: 30,
-    score_criteria3: 60,
-    score_criteria4: 40,
-    score_criteria5: 50,
-    score_criteria6: 50,
+    score_criteria1: 80,
+    score_criteria2: 50,
+    score_criteria3: 70,
+    score_criteria4: 60,
+    score_criteria5: 60,
+    score_criteria6: 70,
     summary_reasoning_criteria1:
       "The application meets basic completeness requirements with English responses and a prototype, but lacks depth in critical areas like partnership development and technical validation. It sufficiently addresses all questions but requires more concrete evidence and specificity to achieve full marks.",
     summary_reasoning_criteria2:
