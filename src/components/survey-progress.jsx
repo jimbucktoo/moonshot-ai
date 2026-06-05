@@ -18,7 +18,7 @@ export function SurveyProgress({ currentStep }) {
       style={{ width: "360px", height: "100vh", borderRadius: "0" }}
     >
       <Card.Body className="align-items-center text-center">
-        <Card.Title className="text-center fw-bold mb-3 moonshotTeal">
+        <Card.Title className="text-center fw-bold mb-3 moonshotBlue">
           <h3>
             <b>Analyze Your</b>
             <br />
@@ -40,10 +40,10 @@ export function SurveyProgress({ currentStep }) {
                   borderRadius: "50%",
                   backgroundColor:
                     step.id < currentStep
-                      ? "#17b7ba"
+                      ? "#0d6efd"
                       : step.id === currentStep
-                        ? "#17b7ba"
-                        : "#e0ecec",
+                        ? "#0d6efd"
+                        : "#dde2ed",
                   color:
                     step.id < currentStep || step.id === currentStep
                       ? "white"
@@ -55,7 +55,7 @@ export function SurveyProgress({ currentStep }) {
               </div>
               <span
                 className={`fw-bold ms-3 w-100 text-center ${
-                  step.id <= currentStep ? "moonshotTeal" : "text-muted"
+                  step.id <= currentStep ? "moonshotBlue" : "text-muted"
                 }`}
               >
                 {step.name}

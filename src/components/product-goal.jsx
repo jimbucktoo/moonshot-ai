@@ -89,7 +89,7 @@ export default function ProductGoal() {
 
               <Button
                 type="submit"
-                className="float-end rounded-pill moonshotButtonTeal"
+                className="float-end rounded-pill moonshotButtonBlue"
                 variant="primary"
                 size="md"
                 style={{ width: "80px" }}

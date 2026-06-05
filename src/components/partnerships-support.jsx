@@ -104,7 +104,7 @@ export default function PartnershipsSupport() {
                 </Button>
                 <Button
                   type="submit"
-                  className="rounded-pill moonshotButtonTeal"
+                  className="rounded-pill moonshotButtonBlue"
                   variant="primary"
                   size="md"
                   style={{ width: "90px" }}
